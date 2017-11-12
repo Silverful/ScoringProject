@@ -30,90 +30,170 @@
         {
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPass = new System.Windows.Forms.TextBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.butEnterClient = new DevExpress.XtraEditors.SimpleButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.butReg = new System.Windows.Forms.Button();
+            this.butEnter = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxLogin
             // 
             this.textBoxLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLogin.Location = new System.Drawing.Point(174, 31);
+            this.textBoxLogin.Location = new System.Drawing.Point(408, 22);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(216, 20);
             this.textBoxLogin.TabIndex = 0;
+            this.textBoxLogin.Text = "Введите логин";
             // 
             // textBoxPass
             // 
             this.textBoxPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPass.Location = new System.Drawing.Point(174, 57);
+            this.textBoxPass.Location = new System.Drawing.Point(408, 48);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(216, 20);
             this.textBoxPass.TabIndex = 1;
+            this.textBoxPass.Text = "Введите пароль";
             // 
-            // labelControl1
+            // butReg
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(12, 31);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(143, 20);
-            this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "Enter Your Login:";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
+            this.butReg.Location = new System.Drawing.Point(525, 74);
+            this.butReg.Name = "butReg";
+            this.butReg.Size = new System.Drawing.Size(99, 28);
+            this.butReg.TabIndex = 6;
+            this.butReg.Text = "Регистрация";
+            this.butReg.UseVisualStyleBackColor = true;
+            this.butReg.Click += new System.EventHandler(this.butReg_Click);
             // 
-            // labelControl2
+            // butEnter
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(12, 55);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(156, 18);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Enter Your Password:";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
+            this.butEnter.Location = new System.Drawing.Point(408, 74);
+            this.butEnter.Name = "butEnter";
+            this.butEnter.Size = new System.Drawing.Size(99, 28);
+            this.butEnter.TabIndex = 7;
+            this.butEnter.Text = "Вход";
+            this.butEnter.UseVisualStyleBackColor = true;
+            this.butEnter.Click += new System.EventHandler(this.butEnter_Click);
             // 
-            // butEnterClient
+            // label1
             // 
-            this.butEnterClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.butEnterClient.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.butEnterClient.Location = new System.Drawing.Point(272, 83);
-            this.butEnterClient.Name = "butEnterClient";
-            this.butEnterClient.Size = new System.Drawing.Size(99, 28);
-            this.butEnterClient.TabIndex = 5;
-            this.butEnterClient.Text = "Log in";
-            this.butEnterClient.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(31, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(312, 51);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Банк \"Добряк\"";
             // 
-            // linkLabel1
+            // pictureBox1
             // 
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.linkLabel1.Location = new System.Drawing.Point(171, 87);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(95, 26);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Register now!";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 131);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 121);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(200, 131);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(122, 121);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(361, 131);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(122, 121);
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(525, 131);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(122, 121);
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label2.Location = new System.Drawing.Point(22, 266);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Потребительский";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label3.Location = new System.Drawing.Point(209, 266);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Ипотечный";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label4.Location = new System.Drawing.Point(347, 266);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Автомобильный";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label5.Location = new System.Drawing.Point(512, 266);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 20);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Доверительный";
             // 
             // Auth
             // 
-            this.AcceptButton = this.butEnterClient;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 157);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.butEnterClient);
-            this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl1);
+            this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.butEnter);
+            this.Controls.Add(this.butReg);
             this.Controls.Add(this.textBoxPass);
             this.Controls.Add(this.textBoxLogin);
-            this.MinimumSize = new System.Drawing.Size(464, 196);
+            this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "Auth";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Скоринговая система - Авторизация";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,10 +203,17 @@
 
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxPass;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.SimpleButton butEnterClient;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button butReg;
+        private System.Windows.Forms.Button butEnter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

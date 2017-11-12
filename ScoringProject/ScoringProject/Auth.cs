@@ -20,22 +20,11 @@ namespace scoringProject
             ClientPg = new ClientPage(this);
         }
 
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl2_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void butEnter_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             if (ClientPg.IsDisposed == false)
-            ClientPg.Visible = true;
+                ClientPg.Visible = true;
             else
             {
                 ClientPage Cl = new ClientPage(this);
@@ -43,9 +32,8 @@ namespace scoringProject
             }
 
         }
-        
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void butReg_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             Registration Regist = new Registration(this);
