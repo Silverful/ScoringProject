@@ -32,9 +32,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.privateData = new System.Windows.Forms.TabPage();
             this.creditType = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.work = new System.Windows.Forms.TabPage();
             this.history = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,10 +75,30 @@
             this.creditType.Location = new System.Drawing.Point(4, 22);
             this.creditType.Name = "creditType";
             this.creditType.Padding = new System.Windows.Forms.Padding(3);
-            this.creditType.Size = new System.Drawing.Size(652, 331);
+            this.creditType.Size = new System.Drawing.Size(652, 312);
             this.creditType.TabIndex = 1;
             this.creditType.Text = "Вид кредита";
             this.creditType.UseVisualStyleBackColor = true;
+            // 
+            // work
+            // 
+            this.work.Location = new System.Drawing.Point(4, 22);
+            this.work.Name = "work";
+            this.work.Padding = new System.Windows.Forms.Padding(3);
+            this.work.Size = new System.Drawing.Size(652, 312);
+            this.work.TabIndex = 2;
+            this.work.Text = "Работа, доход";
+            this.work.UseVisualStyleBackColor = true;
+            // 
+            // history
+            // 
+            this.history.Location = new System.Drawing.Point(4, 22);
+            this.history.Name = "history";
+            this.history.Padding = new System.Windows.Forms.Padding(3);
+            this.history.Size = new System.Drawing.Size(652, 312);
+            this.history.TabIndex = 3;
+            this.history.Text = "Кредитная история";
+            this.history.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -89,26 +109,6 @@
             this.label1.Size = new System.Drawing.Size(332, 51);
             this.label1.TabIndex = 3;
             this.label1.Text = "Анкетирование";
-            // 
-            // work
-            // 
-            this.work.Location = new System.Drawing.Point(4, 22);
-            this.work.Name = "work";
-            this.work.Padding = new System.Windows.Forms.Padding(3);
-            this.work.Size = new System.Drawing.Size(652, 331);
-            this.work.TabIndex = 2;
-            this.work.Text = "Работа, доход";
-            this.work.UseVisualStyleBackColor = true;
-            // 
-            // history
-            // 
-            this.history.Location = new System.Drawing.Point(4, 22);
-            this.history.Name = "history";
-            this.history.Padding = new System.Windows.Forms.Padding(3);
-            this.history.Size = new System.Drawing.Size(652, 331);
-            this.history.TabIndex = 3;
-            this.history.Text = "Кредитная история";
-            this.history.UseVisualStyleBackColor = true;
             // 
             // Test
             // 

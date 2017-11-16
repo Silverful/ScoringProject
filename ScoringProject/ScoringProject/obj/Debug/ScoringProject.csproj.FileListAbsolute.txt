@@ -158,3 +158,5 @@ C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProjec
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\obj\Debug\ScoringProject.exe.licenses
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\obj\Debug\scoringProject.CreditList.resources
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\obj\Debug\scoringProject.Registration.resources
+C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\bin\Debug\MySql.Data.dll
+C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\bin\Debug\MySql.Data.xml

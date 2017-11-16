@@ -8,27 +8,75 @@ using MySql.Data.MySqlClient;
 
 namespace scoringProject.Logic
 {
-    public static class MySQLConnection
+    public static class DBConnection
     {
-        static void Connect()
+        private static MySqlConnection instance = null;
+        private static string connectionString = "server = 127.0.0.2; user=root;database=scoringdb;port=3306;password=3453456";
+
+        /// <summary>
+        /// Состояние соединения
+        /// </summary>
+        public static MySqlConnection Instance
         {
-
-
-            string connStr = "server = 127.0.0.2; user=root;database=scoringdb;port=3306;password=3453456";
-
-            var conn = new MySqlConnection(connStr);
-            try
+            get
             {
-                Console.WriteLine("Подключаемся к MySQL...");
-                conn.Open();
+                return instance;
             }
-            catch (Exception ex)
+            set
             {
-                Console.WriteLine(ex.ToString());
+                instance = value;
             }
-            conn.Close();
-            Console.WriteLine("Соединение закрыто. Готово!");
         }
+        /// <summary>
+        /// Строка соединения с БД
+        /// </summary>
+        public static string ConnectionString
+        {
+            get
+            {
+                return connectionString;
+            }
+            set
+            {
+                connectionString = value;
+            }
+        }
+
+        /// <summary>
+        /// Соединение с базой данных, используя свойство ConnectionString
+        /// </summary>
+        public static void Connect() 
+        {
+            if (instance == null || connectionString != null)
+            {
+                var conn = new MySqlConnection(connectionString);
+                try
+                {
+                    conn.Open();
+                    instance = conn;
+                    return;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return;
+        }
+        /// <summary>
+        /// Закрытие соединения с базой данных и запуск Dispose()
+        /// </summary>
+        public static void CloseConnection()
+        {
+            if (instance != null)
+            {
+                using (instance)
+                {
+                    instance.Close();
+                }
+            }
+        }
+
     }
 }
 
