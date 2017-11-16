@@ -69,7 +69,7 @@ namespace scoringProject
             this.Close();
             AuthLink.Visible = true;
 
-            Client.TestConsole();
+            Client.Test();
 
 
         }

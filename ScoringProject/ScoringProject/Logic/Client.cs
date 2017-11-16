@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace scoringProject.Logic
 {
@@ -125,11 +126,19 @@ namespace scoringProject.Logic
             instance = null;
         }
         
-        public static void TestConsole()
+        public static void Test()
         {
-           
-           Debu.WriteLine(instance.ID + " " + instance.Education + " " + instance.Education + " " + instance.Gender);
-            Console.ReadKey();
+            string path = @"C:\Users\Антон\Desktop\TestLog.txt";
+            File.Create(path);
+            string[] text = { instance.ID.ToString(), instance.Login, instance.Password, instance.Surname,instance.FirstName, instance.DateOfBirth.ToString(),
+                instance.Education, instance.FamilyInstance, instance.PermanentAdress };
+            using (StreamWriter OutPut = new StreamWriter(path))
+            {
+                foreach (string str in text)
+                {
+                    OutPut.WriteLine(str);
+                }
+            }
         }
     }
 }
