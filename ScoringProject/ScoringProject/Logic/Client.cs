@@ -124,5 +124,12 @@ namespace scoringProject.Logic
         {
             instance = null;
         }
+        
+        public static void TestConsole()
+        {
+           
+           Debu.WriteLine(instance.ID + " " + instance.Education + " " + instance.Education + " " + instance.Gender);
+            Console.ReadKey();
+        }
     }
 }
