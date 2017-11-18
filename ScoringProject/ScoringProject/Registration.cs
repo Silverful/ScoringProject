@@ -64,7 +64,7 @@ namespace scoringProject
             cl.FillInstance(ID, textBoxLogin.Text, textBoxPassword.Text, textBoxSurname.Text, textBoxName.Text, textBoxPatronymic.Text,
                 DateOfBirth, textBoxPlaceOfBirth.Text, textBoxINN.Text, gender, textBoxPassportSeries.Text, textBoxPassportNumber.Text,
                 PassportDate, textBoxPassportCode.Text, textBoxPassportPlace.Text, textBoxPhoneNumber.Text, textBoxHomeNumber.Text,
-                textBoxEmail.Text, education, Family, dataGridView1[0, 0].ToString());
+                textBoxEmail.Text, education, Family, (string)dataGridView1[0, 0].Value);
             
             this.Close();
             AuthLink.Visible = true;

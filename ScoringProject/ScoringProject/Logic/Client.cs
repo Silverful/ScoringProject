@@ -129,7 +129,6 @@ namespace scoringProject.Logic
         public static void Test()
         {
             string path = @"C:\Users\Антон\Desktop\TestLog.txt";
-            File.Create(path);
             string[] text = { instance.ID.ToString(), instance.Login, instance.Password, instance.Surname,instance.FirstName, instance.DateOfBirth.ToString(),
                 instance.Education, instance.FamilyInstance, instance.PermanentAdress };
             using (StreamWriter OutPut = new StreamWriter(path))
@@ -137,7 +136,9 @@ namespace scoringProject.Logic
                 foreach (string str in text)
                 {
                     OutPut.WriteLine(str);
+                    
                 }
+                OutPut.Close();
             }
         }
     }
