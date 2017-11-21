@@ -31,6 +31,12 @@
             this.butComplete = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.personalData = new System.Windows.Forms.TabPage();
+            this.textBoxPlaceOfBirth = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.buttonNext = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBoxFemale = new System.Windows.Forms.CheckBox();
@@ -59,39 +65,41 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.contactData = new System.Windows.Forms.TabPage();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxHomeNumber = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.educationData = new System.Windows.Forms.TabPage();
+            this.checkedListBoxEducation = new System.Windows.Forms.CheckedListBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.adressData = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.familyData = new System.Windows.Forms.TabPage();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.textBoxHomeNumber = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkedListBoxEducation = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBoxFamily = new System.Windows.Forms.CheckedListBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Region = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BuildingNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Housing = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BuildingNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FlatNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBoxLogin = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBoxPlaceOfBirth = new System.Windows.Forms.TextBox();
+            this.checkedListBoxFamily = new System.Windows.Forms.CheckedListBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxAdressIndex = new System.Windows.Forms.TextBox();
+            this.textBoxAdressRegion = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxAdressCity = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBoxAdressArea = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBoxAdressCorp = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBoxAdressNumber = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBoxAdressFlat = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBoxAdressBuildning = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBoxAdressStreet = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.personalData.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -100,7 +108,6 @@
             this.educationData.SuspendLayout();
             this.adressData.SuspendLayout();
             this.familyData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // butComplete
@@ -155,6 +162,61 @@
             this.personalData.TabIndex = 0;
             this.personalData.Text = "Персональные данные";
             this.personalData.UseVisualStyleBackColor = true;
+            // 
+            // textBoxPlaceOfBirth
+            // 
+            this.textBoxPlaceOfBirth.Location = new System.Drawing.Point(187, 205);
+            this.textBoxPlaceOfBirth.Name = "textBoxPlaceOfBirth";
+            this.textBoxPlaceOfBirth.Size = new System.Drawing.Size(119, 20);
+            this.textBoxPlaceOfBirth.TabIndex = 18;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label19.Location = new System.Drawing.Point(16, 205);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(156, 20);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "Место рождения:";
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxPassword.Location = new System.Drawing.Point(395, 55);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(151, 20);
+            this.textBoxPassword.TabIndex = 16;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label18.Location = new System.Drawing.Point(312, 55);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(77, 20);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "Пароль:";
+            // 
+            // textBoxLogin
+            // 
+            this.textBoxLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxLogin.Location = new System.Drawing.Point(387, 19);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(159, 20);
+            this.textBoxLogin.TabIndex = 14;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label16.Location = new System.Drawing.Point(312, 21);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 20);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Логин: ";
             // 
             // buttonNext
             // 
@@ -449,6 +511,43 @@
             this.contactData.Text = "Контактная информация";
             this.contactData.UseVisualStyleBackColor = true;
             // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxEmail.Location = new System.Drawing.Point(82, 125);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(344, 20);
+            this.textBoxEmail.TabIndex = 19;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label14.Location = new System.Drawing.Point(23, 125);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(62, 20);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "E-mail:";
+            // 
+            // textBoxHomeNumber
+            // 
+            this.textBoxHomeNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxHomeNumber.Location = new System.Drawing.Point(220, 72);
+            this.textBoxHomeNumber.Name = "textBoxHomeNumber";
+            this.textBoxHomeNumber.Size = new System.Drawing.Size(206, 20);
+            this.textBoxHomeNumber.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label13.Location = new System.Drawing.Point(23, 70);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(184, 20);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Домашний телефон:";
+            // 
             // textBoxPhoneNumber
             // 
             this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -491,6 +590,33 @@
             this.educationData.Text = "Образование";
             this.educationData.UseVisualStyleBackColor = true;
             // 
+            // checkedListBoxEducation
+            // 
+            this.checkedListBoxEducation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.checkedListBoxEducation.FormattingEnabled = true;
+            this.checkedListBoxEducation.Items.AddRange(new object[] {
+            "Ученая степень",
+            "Несколько высших",
+            "Высшее",
+            "Незаконченное высшее",
+            "Среднее специальное",
+            "Среднее",
+            "Ниже среднего"});
+            this.checkedListBoxEducation.Location = new System.Drawing.Point(23, 57);
+            this.checkedListBoxEducation.Name = "checkedListBoxEducation";
+            this.checkedListBoxEducation.Size = new System.Drawing.Size(242, 172);
+            this.checkedListBoxEducation.TabIndex = 15;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label15.Location = new System.Drawing.Point(19, 18);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(126, 20);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Образование:";
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(433, 237);
@@ -503,7 +629,24 @@
             // 
             // adressData
             // 
-            this.adressData.Controls.Add(this.dataGridView1);
+            this.adressData.Controls.Add(this.textBoxAdressStreet);
+            this.adressData.Controls.Add(this.label28);
+            this.adressData.Controls.Add(this.textBoxAdressFlat);
+            this.adressData.Controls.Add(this.label26);
+            this.adressData.Controls.Add(this.textBoxAdressBuildning);
+            this.adressData.Controls.Add(this.label27);
+            this.adressData.Controls.Add(this.textBoxAdressCorp);
+            this.adressData.Controls.Add(this.label24);
+            this.adressData.Controls.Add(this.textBoxAdressNumber);
+            this.adressData.Controls.Add(this.label25);
+            this.adressData.Controls.Add(this.textBoxAdressCity);
+            this.adressData.Controls.Add(this.label22);
+            this.adressData.Controls.Add(this.textBoxAdressArea);
+            this.adressData.Controls.Add(this.label23);
+            this.adressData.Controls.Add(this.textBoxAdressRegion);
+            this.adressData.Controls.Add(this.label21);
+            this.adressData.Controls.Add(this.textBoxAdressIndex);
+            this.adressData.Controls.Add(this.label20);
             this.adressData.Controls.Add(this.button4);
             this.adressData.Location = new System.Drawing.Point(4, 22);
             this.adressData.Name = "adressData";
@@ -533,69 +676,16 @@
             this.familyData.Text = "Семья";
             this.familyData.UseVisualStyleBackColor = true;
             // 
-            // textBoxHomeNumber
+            // label17
             // 
-            this.textBoxHomeNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxHomeNumber.Location = new System.Drawing.Point(220, 72);
-            this.textBoxHomeNumber.Name = "textBoxHomeNumber";
-            this.textBoxHomeNumber.Size = new System.Drawing.Size(206, 20);
-            this.textBoxHomeNumber.TabIndex = 17;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label13.Location = new System.Drawing.Point(23, 70);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(184, 20);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Домашний телефон:";
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxEmail.Location = new System.Drawing.Point(82, 125);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(344, 20);
-            this.textBoxEmail.TabIndex = 19;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label14.Location = new System.Drawing.Point(23, 125);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 20);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "E-mail:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label15.Location = new System.Drawing.Point(19, 18);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(126, 20);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "Образование:";
-            // 
-            // checkedListBoxEducation
-            // 
-            this.checkedListBoxEducation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.checkedListBoxEducation.FormattingEnabled = true;
-            this.checkedListBoxEducation.Items.AddRange(new object[] {
-            "Ученая степень",
-            "Несколько высших",
-            "Высшее",
-            "Незаконченное высшее",
-            "Среднее специальное",
-            "Среднее",
-            "Ниже среднего"});
-            this.checkedListBoxEducation.Location = new System.Drawing.Point(23, 57);
-            this.checkedListBoxEducation.Name = "checkedListBoxEducation";
-            this.checkedListBoxEducation.Size = new System.Drawing.Size(242, 172);
-            this.checkedListBoxEducation.TabIndex = 15;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label17.Location = new System.Drawing.Point(18, 21);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(195, 20);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Семейное положение:";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // checkedListBoxFamily
             // 
@@ -612,134 +702,176 @@
             this.checkedListBoxFamily.Size = new System.Drawing.Size(298, 151);
             this.checkedListBoxFamily.TabIndex = 0;
             // 
-            // label17
+            // label20
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label17.Location = new System.Drawing.Point(18, 21);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(195, 20);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Семейное положение:";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label20.Location = new System.Drawing.Point(13, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 20);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Индекс";
             // 
-            // dataGridView1
+            // textBoxAdressIndex
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Index,
-            this.Region,
-            this.Area,
-            this.City,
-            this.Street,
-            this.BuildingNumber,
-            this.Housing,
-            this.BuildingNum,
-            this.FlatNum});
-            this.dataGridView1.Location = new System.Drawing.Point(27, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(500, 62);
-            this.dataGridView1.TabIndex = 14;
+            this.textBoxAdressIndex.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressIndex.Location = new System.Drawing.Point(81, 19);
+            this.textBoxAdressIndex.Name = "textBoxAdressIndex";
+            this.textBoxAdressIndex.Size = new System.Drawing.Size(222, 20);
+            this.textBoxAdressIndex.TabIndex = 15;
             // 
-            // Index
+            // textBoxAdressRegion
             // 
-            this.Index.HeaderText = "Индекс";
-            this.Index.Name = "Index";
+            this.textBoxAdressRegion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressRegion.Location = new System.Drawing.Point(207, 58);
+            this.textBoxAdressRegion.Name = "textBoxAdressRegion";
+            this.textBoxAdressRegion.Size = new System.Drawing.Size(96, 20);
+            this.textBoxAdressRegion.TabIndex = 17;
             // 
-            // Region
+            // label21
             // 
-            this.Region.HeaderText = "Республика/Область/Регион/Край";
-            this.Region.Name = "Region";
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label21.Location = new System.Drawing.Point(13, 58);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(188, 20);
+            this.label21.TabIndex = 16;
+            this.label21.Text = "Область/регион/край";
             // 
-            // Area
+            // textBoxAdressCity
             // 
-            this.Area.HeaderText = "Район";
-            this.Area.Name = "Area";
+            this.textBoxAdressCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressCity.Location = new System.Drawing.Point(153, 143);
+            this.textBoxAdressCity.Name = "textBoxAdressCity";
+            this.textBoxAdressCity.Size = new System.Drawing.Size(150, 20);
+            this.textBoxAdressCity.TabIndex = 21;
             // 
-            // City
+            // label22
             // 
-            this.City.HeaderText = "Город/поселок";
-            this.City.Name = "City";
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label22.Location = new System.Drawing.Point(13, 141);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(134, 20);
+            this.label22.TabIndex = 20;
+            this.label22.Text = "Город/поселок";
             // 
-            // Street
+            // textBoxAdressArea
             // 
-            this.Street.HeaderText = "Улица";
-            this.Street.Name = "Street";
+            this.textBoxAdressArea.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressArea.Location = new System.Drawing.Point(81, 102);
+            this.textBoxAdressArea.Name = "textBoxAdressArea";
+            this.textBoxAdressArea.Size = new System.Drawing.Size(222, 20);
+            this.textBoxAdressArea.TabIndex = 19;
             // 
-            // BuildingNumber
+            // label23
             // 
-            this.BuildingNumber.HeaderText = "Номер дома";
-            this.BuildingNumber.Name = "BuildingNumber";
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label23.Location = new System.Drawing.Point(13, 100);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(60, 20);
+            this.label23.TabIndex = 18;
+            this.label23.Text = "Район";
             // 
-            // Housing
+            // textBoxAdressCorp
             // 
-            this.Housing.HeaderText = "Корпус";
-            this.Housing.Name = "Housing";
+            this.textBoxAdressCorp.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxAdressCorp.Location = new System.Drawing.Point(391, 58);
+            this.textBoxAdressCorp.Name = "textBoxAdressCorp";
+            this.textBoxAdressCorp.Size = new System.Drawing.Size(138, 20);
+            this.textBoxAdressCorp.TabIndex = 25;
             // 
-            // BuildingNum
+            // label24
             // 
-            this.BuildingNum.HeaderText = "Строение";
-            this.BuildingNum.Name = "BuildingNum";
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label24.Location = new System.Drawing.Point(309, 58);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(67, 20);
+            this.label24.TabIndex = 24;
+            this.label24.Text = "Корпус";
             // 
-            // FlatNum
+            // textBoxAdressNumber
             // 
-            this.FlatNum.HeaderText = "Квартира";
-            this.FlatNum.Name = "FlatNum";
+            this.textBoxAdressNumber.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxAdressNumber.Location = new System.Drawing.Point(433, 19);
+            this.textBoxAdressNumber.Name = "textBoxAdressNumber";
+            this.textBoxAdressNumber.Size = new System.Drawing.Size(96, 20);
+            this.textBoxAdressNumber.TabIndex = 23;
             // 
-            // label16
+            // label25
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label16.Location = new System.Drawing.Point(312, 21);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 20);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "Логин: ";
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label25.Location = new System.Drawing.Point(309, 17);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(113, 20);
+            this.label25.TabIndex = 22;
+            this.label25.Text = "Номер дома";
             // 
-            // textBoxLogin
+            // textBoxAdressFlat
             // 
-            this.textBoxLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBoxLogin.Location = new System.Drawing.Point(387, 19);
-            this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(159, 20);
-            this.textBoxLogin.TabIndex = 14;
+            this.textBoxAdressFlat.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxAdressFlat.Location = new System.Drawing.Point(405, 143);
+            this.textBoxAdressFlat.Name = "textBoxAdressFlat";
+            this.textBoxAdressFlat.Size = new System.Drawing.Size(124, 20);
+            this.textBoxAdressFlat.TabIndex = 29;
             // 
-            // textBoxPassword
+            // label26
             // 
-            this.textBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBoxPassword.Location = new System.Drawing.Point(395, 55);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(151, 20);
-            this.textBoxPassword.TabIndex = 16;
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label26.Location = new System.Drawing.Point(309, 139);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(90, 20);
+            this.label26.TabIndex = 28;
+            this.label26.Text = "Квартира";
             // 
-            // label18
+            // textBoxAdressBuildning
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label18.Location = new System.Drawing.Point(312, 55);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(77, 20);
-            this.label18.TabIndex = 15;
-            this.label18.Text = "Пароль:";
+            this.textBoxAdressBuildning.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxAdressBuildning.Location = new System.Drawing.Point(406, 98);
+            this.textBoxAdressBuildning.Name = "textBoxAdressBuildning";
+            this.textBoxAdressBuildning.Size = new System.Drawing.Size(123, 20);
+            this.textBoxAdressBuildning.TabIndex = 27;
             // 
-            // label19
+            // label27
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label19.Location = new System.Drawing.Point(16, 205);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(156, 20);
-            this.label19.TabIndex = 17;
-            this.label19.Text = "Место рождения:";
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label27.Location = new System.Drawing.Point(309, 98);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(91, 20);
+            this.label27.TabIndex = 26;
+            this.label27.Text = "Строение";
             // 
-            // textBoxPlaceOfBirth
+            // textBoxAdressStreet
             // 
-            this.textBoxPlaceOfBirth.Location = new System.Drawing.Point(187, 205);
-            this.textBoxPlaceOfBirth.Name = "textBoxPlaceOfBirth";
-            this.textBoxPlaceOfBirth.Size = new System.Drawing.Size(119, 20);
-            this.textBoxPlaceOfBirth.TabIndex = 18;
+            this.textBoxAdressStreet.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressStreet.Location = new System.Drawing.Point(81, 185);
+            this.textBoxAdressStreet.Name = "textBoxAdressStreet";
+            this.textBoxAdressStreet.Size = new System.Drawing.Size(222, 20);
+            this.textBoxAdressStreet.TabIndex = 31;
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label28.Location = new System.Drawing.Point(13, 185);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(60, 20);
+            this.label28.TabIndex = 30;
+            this.label28.Text = "Улица";
             // 
             // Registration
             // 
@@ -764,9 +896,9 @@
             this.educationData.ResumeLayout(false);
             this.educationData.PerformLayout();
             this.adressData.ResumeLayout(false);
+            this.adressData.PerformLayout();
             this.familyData.ResumeLayout(false);
             this.familyData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -821,21 +953,29 @@
         private System.Windows.Forms.CheckedListBox checkedListBoxEducation;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.CheckedListBox checkedListBoxFamily;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Index;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Region;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
-        private System.Windows.Forms.DataGridViewTextBoxColumn City;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Street;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BuildingNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Housing;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BuildingNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FlatNum;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBoxPlaceOfBirth;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBoxAdressStreet;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox textBoxAdressFlat;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBoxAdressBuildning;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox textBoxAdressCorp;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBoxAdressNumber;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBoxAdressCity;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBoxAdressArea;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBoxAdressRegion;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBoxAdressIndex;
+        private System.Windows.Forms.Label label20;
     }
 }

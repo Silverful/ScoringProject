@@ -32,7 +32,6 @@ namespace scoringProject.Logic
         public string Email { get; set; }
         public string Education { get; set; }
         public string FamilyInstance { get; set; }
-        public string PermanentAdress { get; set; }
 
         #endregion
  
@@ -49,15 +48,37 @@ namespace scoringProject.Logic
         /// Состояние клиента
         /// </summary>
         private static Client instance = null;
+        /// <summary>
+        /// Строка для запроса
+        /// </summary>
+        private static string sqlstatement;
 
-        private Client()
+
+        private Client() 
         {
         }
+        public string SqlStatement
+        {
+            get
+            {
+                return sqlstatement;
+            }
+            set
+            {
 
+            }
+        }
 
+        public void CreateInsertStatement()
+        {
+            sqlstatement = "INSERT INTO CLIENT VALUES (" + sqlstatement + ")";
+            
+        }
+        
         /// <summary>
         /// Создание класса Client и получение объекта
         /// </summary>
+        /// 
         public static Client getInstance()
         {
             if (instance == null)
@@ -66,8 +87,9 @@ namespace scoringProject.Logic
             }
             return instance;
         }
+
         /// <summary>
-        /// Заполнение инстанса
+        /// Заполнение инстанса и одновременно строки SqlStatement
         /// </summary>
         /// <param name="gID"></param>
         /// <param name="gLogin"></param>
@@ -90,31 +112,64 @@ namespace scoringProject.Logic
         /// <param name="gEducation"></param>
         /// <param name="gFamilyInstance"></param>
         /// <param name="gPermanentAdress"></param>
-        public void FillInstance(int gID, string gLogin, string gPassword, string gSurname, string gFirstName, string gPatronymic,
+        public void FillInstance(string gLogin, string gPassword, string gSurname, string gFirstName, string gPatronymic,
             DateTime gDateOfBirth, string gPlaceOfBirth, string gINN, string gGender, string gPassportSeries, string gPassportNumber,
             DateTime gPassportDate, string gPassportCode, string gPassportPlace, string gPhoneNumber, string gHomePhoneNumber,
-            string gEmail, string gEducation, string gFamilyInstance, string gPermanentAdress)
+            string gEmail, string gEducation, string gFamilyInstance, string gAdressIndex, string gAdressRegion, string gAdressArea, string gCity)
         {
-            ID = gID;
+            ID = InteractionDB.CountNextID();
+            sqlstatement += "'"+ ID.ToString() + "',";
             Login = gLogin;
+            sqlstatement += "'" + gLogin + "',";
             Password = gPassword;
+            sqlstatement += "'" + gPassword + "',";
             Surname = gSurname;
+            sqlstatement += "'" + gSurname + "',";
             FirstName = gFirstName;
+            sqlstatement += "'" + gFirstName + "',";
             Patronymic = gPatronymic;
+            sqlstatement += "'" + gPatronymic + "',";
             DateOfBirth = gDateOfBirth;
+            sqlstatement += "'" + gDateOfBirth.ToString() + "',";
             PlaceOfBirth = gPlaceOfBirth;
+            sqlstatement += "'" + gPlaceOfBirth + "',";
             INN = gINN;
+            sqlstatement += "'" + gINN + "',";
             Gender = gGender;
+            sqlstatement += "'" + gGender + "',";
             PassportSeries = gPassportSeries;
+            sqlstatement += "'" + gPassportSeries + "',";
             PassportNumber = gPassportNumber;
+            sqlstatement += "'" + gPassportNumber + "',";
             PassportDate = gPassportDate;
+            sqlstatement += "'" + gPassportDate.ToString() + "',";
+            PassportCode = gPassportCode;
+            sqlstatement += "'" + gPassportCode + "',";
             PassportPlace = gPassportPlace;
+            sqlstatement += "'" + gPassportPlace + "',";
             PhoneNumber = gPhoneNumber;
+            sqlstatement += "'" + gPhoneNumber + "',";
             HomePhoneNumber = gHomePhoneNumber;
+            sqlstatement += "'" + gHomePhoneNumber + "',";
             Email = gEmail;
+            sqlstatement += "'" + gEmail + "',";
             Education = gEducation;
+            sqlstatement += "'" + gEducation + "',";
             FamilyInstance = gFamilyInstance;
-            PermanentAdress = gPermanentAdress;
+            sqlstatement += "'" + gFamilyInstance + "',";
+            Index = gAdressIndex;
+            sqlstatement += "'" + gAdressIndex + "',";
+
+            Region = gAdressRegion;
+            sqlstatement += "'" + gAdressRegion + "',";
+
+            Area = gAdressArea;
+            sqlstatement += "'" + gAdressArea + "',";
+
+            City = gCity;
+            sqlstatement += "'" + gCity + "'";
+
+
         }
 
 
@@ -126,7 +181,7 @@ namespace scoringProject.Logic
             instance = null;
         }
         
-        public static void Test()
+      /*  public static void Test()
         {
             string path = @"C:\Users\Антон\Desktop\TestLog.txt";
             string[] text = { instance.ID.ToString(), instance.Login, instance.Password, instance.Surname,instance.FirstName, instance.DateOfBirth.ToString(),
@@ -140,6 +195,6 @@ namespace scoringProject.Logic
                 }
                 OutPut.Close();
             }
-        }
+        } */
     }
 }
