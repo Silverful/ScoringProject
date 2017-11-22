@@ -118,7 +118,7 @@ namespace scoringProject.Logic
             string gEmail, string gEducation, string gFamilyInstance, string gAdressIndex, string gAdressRegion, string gAdressArea, string gCity)
         {
             ID = InteractionDB.CountNextID();
-            sqlstatement += "'"+ ID.ToString() + "',";
+            sqlstatement += "'" + ID.ToString() + "',";
             Login = gLogin;
             sqlstatement += "'" + gLogin + "',";
             Password = gPassword;
@@ -129,8 +129,11 @@ namespace scoringProject.Logic
             sqlstatement += "'" + gFirstName + "',";
             Patronymic = gPatronymic;
             sqlstatement += "'" + gPatronymic + "',";
-            DateOfBirth = gDateOfBirth;
-            sqlstatement += "'" + gDateOfBirth.ToString() + "',";
+
+            DateOfBirth = gDateOfBirth.Date;
+            string sqldateofbirth = gDateOfBirth.Year.ToString() + "/" + gDateOfBirth.Month.ToString() + "/" + gDateOfBirth.Day.ToString();
+            sqlstatement += "'" + sqldateofbirth + "',";
+
             PlaceOfBirth = gPlaceOfBirth;
             sqlstatement += "'" + gPlaceOfBirth + "',";
             INN = gINN;
@@ -141,8 +144,11 @@ namespace scoringProject.Logic
             sqlstatement += "'" + gPassportSeries + "',";
             PassportNumber = gPassportNumber;
             sqlstatement += "'" + gPassportNumber + "',";
+
             PassportDate = gPassportDate;
-            sqlstatement += "'" + gPassportDate.ToString() + "',";
+            string sqlpassportdate = gPassportDate.Year.ToString() + "/" + gPassportDate.Month.ToString() + "/" + gPassportDate.Day.ToString();
+            sqlstatement += "'" + sqlpassportdate + "',";
+
             PassportCode = gPassportCode;
             sqlstatement += "'" + gPassportCode + "',";
             PassportPlace = gPassportPlace;
