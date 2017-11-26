@@ -35,6 +35,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.HelloName = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.labelLogin = new System.Windows.Forms.Label();
+            this.labelFIO = new System.Windows.Forms.Label();
+            this.labelDateofBirth = new System.Windows.Forms.Label();
+            this.labelCity = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +123,116 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Личная информация:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label4.Location = new System.Drawing.Point(213, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Добрый день, ";
+            // 
+            // HelloName
+            // 
+            this.HelloName.AutoSize = true;
+            this.HelloName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.HelloName.Location = new System.Drawing.Point(343, 60);
+            this.HelloName.Name = "HelloName";
+            this.HelloName.Size = new System.Drawing.Size(0, 20);
+            this.HelloName.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label5.Location = new System.Drawing.Point(18, 175);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Логин: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label6.Location = new System.Drawing.Point(18, 212);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Ф.И.О.: ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label7.Location = new System.Drawing.Point(18, 246);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(146, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Дата рождения:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label8.Location = new System.Drawing.Point(18, 277);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 20);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Город:";
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelLogin.Location = new System.Drawing.Point(83, 175);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(0, 20);
+            this.labelLogin.TabIndex = 15;
+            // 
+            // labelFIO
+            // 
+            this.labelFIO.AutoSize = true;
+            this.labelFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelFIO.Location = new System.Drawing.Point(95, 212);
+            this.labelFIO.Name = "labelFIO";
+            this.labelFIO.Size = new System.Drawing.Size(0, 20);
+            this.labelFIO.TabIndex = 16;
+            // 
+            // labelDateofBirth
+            // 
+            this.labelDateofBirth.AutoSize = true;
+            this.labelDateofBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelDateofBirth.Location = new System.Drawing.Point(170, 246);
+            this.labelDateofBirth.Name = "labelDateofBirth";
+            this.labelDateofBirth.Size = new System.Drawing.Size(0, 20);
+            this.labelDateofBirth.TabIndex = 17;
+            // 
+            // labelCity
+            // 
+            this.labelCity.AutoSize = true;
+            this.labelCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelCity.Location = new System.Drawing.Point(90, 277);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(0, 20);
+            this.labelCity.TabIndex = 18;
+            // 
             // ClientPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.labelCity);
+            this.Controls.Add(this.labelDateofBirth);
+            this.Controls.Add(this.labelFIO);
+            this.Controls.Add(this.labelLogin);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.HelloName);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -129,6 +244,7 @@
             this.Name = "ClientPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientPage";
+            this.Load += new System.EventHandler(this.ClientPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,5 +260,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label HelloName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.Label labelFIO;
+        private System.Windows.Forms.Label labelDateofBirth;
+        private System.Windows.Forms.Label labelCity;
     }
 }

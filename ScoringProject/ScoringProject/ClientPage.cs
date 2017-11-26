@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using scoringProject.Logic;
 
 namespace scoringProject
 {
@@ -28,6 +29,7 @@ namespace scoringProject
 
         private void butBackToLogin_Click(object sender, EventArgs e)
         {
+            Client.DestroyInstance();
             LoginLink.Show();
             this.Close();
         }
@@ -49,6 +51,12 @@ namespace scoringProject
             CreditList Cr = new CreditList(this);
             this.Visible = false;
             Cr.Visible = true;
+        }
+
+        private void ClientPage_Load(object sender, EventArgs e)
+        {
+            ClientPageOpen.LabelChange(HelloName, labelLogin, labelFIO, labelDateofBirth, labelCity);
+
         }
     }
 }

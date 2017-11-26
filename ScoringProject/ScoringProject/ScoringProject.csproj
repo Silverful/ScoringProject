@@ -100,7 +100,9 @@
     <Compile Include="CreditList.Designer.cs">
       <DependentUpon>CreditList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Authorize.cs" />
     <Compile Include="Logic\Client.cs" />
+    <Compile Include="Logic\ClientPageOpen.cs" />
     <Compile Include="Logic\InteractionDB.cs" />
     <Compile Include="Logic\DBConnection.cs" />
     <Compile Include="Program.cs" />

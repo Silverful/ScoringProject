@@ -24,7 +24,6 @@ namespace scoringProject.Logic
             {
                 try
                 {
-                    cl.CreateInsertStatement();
                     string Statement = cl.SqlStatement;
                     MySqlCommand cmd = new MySqlCommand(Statement, DBConnection.Instance);
                     cmd.ExecuteNonQuery();
@@ -65,6 +64,52 @@ namespace scoringProject.Logic
             DBConnection.CloseConnection();
             return NextID;
         }
+        /// <summary>
+        /// Список с результатами SELECT * запросов.
+        /// </summary>
+        public static List<string> StringResult = new List<string>();
+
+        /// <summary>
+        /// Метод проверяет, есть ли в базе данных пользователь с данными логином и паролем
+        /// Если есть, то все параметры строки сохраняет в список StringResult
+        /// </summary>
+        /// <param name="Login"></param>
+        /// <param name="Password"></param>
+        /// <returns></returns>
+        public static bool IsExists(string Login, string Password)
+        {
+            bool result;
+
+            DBConnection.Connect();
+            try
+            {
+                string sqltext = "SELECT * FROM CLIENT WHERE login = '" + Login + "' AND password = '" + Password + "'";
+                MySqlCommand cmd = new MySqlCommand(sqltext, DBConnection.Instance);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                if (rdr.HasRows == false)
+                    result = false;
+                else
+                {
+                    result = true;
+                    while (rdr.Read())
+                    {
+                        for (int j = 0; j < rdr.FieldCount; j++)
+                            StringResult.Add(rdr[j].ToString());
+                    }
+                }
+                rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            DBConnection.CloseConnection();
+            return result; 
+        }
+
+
+
+
         /*  public static string CreateStatement(Client cl)
           {
               string Statement;

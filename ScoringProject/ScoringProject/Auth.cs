@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using scoringProject.Logic;
 
 namespace scoringProject
 {
@@ -22,14 +23,19 @@ namespace scoringProject
 
         private void butEnter_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            if (ClientPg.IsDisposed == false)
-                ClientPg.Visible = true;
-            else
+            if (Authorize.Enter(textBoxLogin, textBoxPass))
             {
-                ClientPage Cl = new ClientPage(this);
-                Cl.Visible = true;
+                this.Visible = false;
+                if (ClientPg.IsDisposed == false)
+                    ClientPg.Visible = true;
+                else
+                {
+                    ClientPage Cl = new ClientPage(this);
+                    Cl.Visible = true;
+                }
             }
+            else butEnter.Text = "Вход не удался";
+
 
         }
 

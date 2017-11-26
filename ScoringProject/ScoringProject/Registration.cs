@@ -61,14 +61,11 @@ namespace scoringProject
                     break;
 
             }
-            cl.FillInstance(textBoxLogin.Text, textBoxPassword.Text, textBoxSurname.Text, textBoxName.Text, textBoxPatronymic.Text,
+            cl.CreateSQLQuery(textBoxLogin.Text, textBoxPassword.Text, textBoxSurname.Text, textBoxName.Text, textBoxPatronymic.Text,
                 DateOfBirth, textBoxPlaceOfBirth.Text, textBoxINN.Text, gender, textBoxPassportSeries.Text, textBoxPassportNumber.Text,
                 PassportDate, textBoxPassportCode.Text, textBoxPassportPlace.Text, textBoxPhoneNumber.Text, textBoxHomeNumber.Text,
                 textBoxEmail.Text, education, Family, textBoxAdressIndex.Text, textBoxAdressRegion.Text, textBoxAdressArea.Text, textBoxAdressCity.Text);
-            //Client.Test();
             InteractionDB.AddClient(cl);
-
-
             this.Close();
             AuthLink.Visible = true;
 

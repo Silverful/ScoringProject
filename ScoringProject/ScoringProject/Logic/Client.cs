@@ -33,16 +33,13 @@ namespace scoringProject.Logic
         public string Education { get; set; }
         public string FamilyInstance { get; set; }
 
-        #endregion
- 
-
+        #endregion  
         #region AdressClientProps
         public string Index { get; set; }
         public string Region { get; set; }
         public string Area { get; set; }
         public string City { get; set; }
         #endregion
-
 
         /// <summary>
         /// Состояние клиента
@@ -52,7 +49,6 @@ namespace scoringProject.Logic
         /// Строка для запроса
         /// </summary>
         private static string sqlstatement;
-
 
         private Client() 
         {
@@ -67,12 +63,6 @@ namespace scoringProject.Logic
             {
 
             }
-        }
-
-        public void CreateInsertStatement()
-        {
-            sqlstatement = "INSERT INTO CLIENT VALUES (" + sqlstatement + ")";
-            
         }
         
         /// <summary>
@@ -89,7 +79,7 @@ namespace scoringProject.Logic
         }
 
         /// <summary>
-        /// Заполнение инстанса и одновременно строки SqlStatement
+        /// Заполнение инстанса
         /// </summary>
         /// <param name="gID"></param>
         /// <param name="gLogin"></param>
@@ -112,77 +102,103 @@ namespace scoringProject.Logic
         /// <param name="gEducation"></param>
         /// <param name="gFamilyInstance"></param>
         /// <param name="gPermanentAdress"></param>
-        public void FillInstance(string gLogin, string gPassword, string gSurname, string gFirstName, string gPatronymic,
+        public void FillInstance(List<string> QueryData)
+        {
+            int i = 0;
+            ID = Convert.ToInt32(QueryData[i++]) ;
+            Login = QueryData[i++];
+            Password = QueryData[i++];
+            Surname = QueryData[i++];
+            FirstName = QueryData[i++];
+            Patronymic = QueryData[i++];
+            DateOfBirth = Convert.ToDateTime(QueryData[i++]);
+            PlaceOfBirth = QueryData[i++];
+            INN = QueryData[i++];
+            Gender = QueryData[i++];
+            PassportSeries = QueryData[i++];
+            PassportNumber = QueryData[i++];
+            PassportDate = Convert.ToDateTime(QueryData[i++]);
+            PassportCode = QueryData[i++];
+            PassportPlace = QueryData[i++];
+            PhoneNumber = QueryData[i++];
+            HomePhoneNumber = QueryData[i++];
+            Email = QueryData[i++];
+            Education = QueryData[i++];
+            FamilyInstance = QueryData[i++];
+            Index = QueryData[i++];
+            Region = QueryData[i++];
+            Area = QueryData[i++];
+            City = QueryData[i++];
+        }
+
+        /// <summary>
+        /// Создание строки sqlstatement
+        /// </summary>
+        /// <param name="gLogin"></param>
+        /// <param name="gPassword"></param>
+        /// <param name="gSurname"></param>
+        /// <param name="gFirstName"></param>
+        /// <param name="gPatronymic"></param>
+        /// <param name="gDateOfBirth"></param>
+        /// <param name="gPlaceOfBirth"></param>
+        /// <param name="gINN"></param>
+        /// <param name="gGender"></param>
+        /// <param name="gPassportSeries"></param>
+        /// <param name="gPassportNumber"></param>
+        /// <param name="gPassportDate"></param>
+        /// <param name="gPassportCode"></param>
+        /// <param name="gPassportPlace"></param>
+        /// <param name="gPhoneNumber"></param>
+        /// <param name="gHomePhoneNumber"></param>
+        /// <param name="gEmail"></param>
+        /// <param name="gEducation"></param>
+        /// <param name="gFamilyInstance"></param>
+        /// <param name="gAdressIndex"></param>
+        /// <param name="gAdressRegion"></param>
+        /// <param name="gAdressArea"></param>
+        /// <param name="gCity"></param>
+        public void CreateSQLQuery(string gLogin, string gPassword, string gSurname, string gFirstName, string gPatronymic,
             DateTime gDateOfBirth, string gPlaceOfBirth, string gINN, string gGender, string gPassportSeries, string gPassportNumber,
             DateTime gPassportDate, string gPassportCode, string gPassportPlace, string gPhoneNumber, string gHomePhoneNumber,
             string gEmail, string gEducation, string gFamilyInstance, string gAdressIndex, string gAdressRegion, string gAdressArea, string gCity)
         {
-            ID = InteractionDB.CountNextID();
-            sqlstatement += "'" + ID.ToString() + "',";
-            Login = gLogin;
+            sqlstatement += "'" + InteractionDB.CountNextID().ToString() + "',";
             sqlstatement += "'" + gLogin + "',";
-            Password = gPassword;
             sqlstatement += "'" + gPassword + "',";
-            Surname = gSurname;
             sqlstatement += "'" + gSurname + "',";
-            FirstName = gFirstName;
             sqlstatement += "'" + gFirstName + "',";
-            Patronymic = gPatronymic;
             sqlstatement += "'" + gPatronymic + "',";
 
-            DateOfBirth = gDateOfBirth.Date;
             string sqldateofbirth = gDateOfBirth.Year.ToString() + "/" + gDateOfBirth.Month.ToString() + "/" + gDateOfBirth.Day.ToString();
             sqlstatement += "'" + sqldateofbirth + "',";
 
-            PlaceOfBirth = gPlaceOfBirth;
             sqlstatement += "'" + gPlaceOfBirth + "',";
-            INN = gINN;
             sqlstatement += "'" + gINN + "',";
-            Gender = gGender;
             sqlstatement += "'" + gGender + "',";
-            PassportSeries = gPassportSeries;
             sqlstatement += "'" + gPassportSeries + "',";
-            PassportNumber = gPassportNumber;
             sqlstatement += "'" + gPassportNumber + "',";
 
-            PassportDate = gPassportDate;
             string sqlpassportdate = gPassportDate.Year.ToString() + "/" + gPassportDate.Month.ToString() + "/" + gPassportDate.Day.ToString();
             sqlstatement += "'" + sqlpassportdate + "',";
 
-            PassportCode = gPassportCode;
             sqlstatement += "'" + gPassportCode + "',";
-            PassportPlace = gPassportPlace;
             sqlstatement += "'" + gPassportPlace + "',";
-            PhoneNumber = gPhoneNumber;
             sqlstatement += "'" + gPhoneNumber + "',";
-            HomePhoneNumber = gHomePhoneNumber;
             sqlstatement += "'" + gHomePhoneNumber + "',";
-            Email = gEmail;
             sqlstatement += "'" + gEmail + "',";
-            Education = gEducation;
             sqlstatement += "'" + gEducation + "',";
-            FamilyInstance = gFamilyInstance;
             sqlstatement += "'" + gFamilyInstance + "',";
-            Index = gAdressIndex;
             sqlstatement += "'" + gAdressIndex + "',";
-
-            Region = gAdressRegion;
             sqlstatement += "'" + gAdressRegion + "',";
-
-            Area = gAdressArea;
             sqlstatement += "'" + gAdressArea + "',";
-
-            City = gCity;
             sqlstatement += "'" + gCity + "'";
-
-
+            sqlstatement = "INSERT INTO CLIENT VALUES (" + sqlstatement + ")";
         }
-
 
         /// <summary>
         /// Обнуление инстанса
         /// </summary>
-        public void DestroyInstance()
+        static public void DestroyInstance()
         {
             instance = null;
         }
