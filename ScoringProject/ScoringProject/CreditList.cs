@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using scoringProject.Logic;
 
 namespace scoringProject
 {
     public partial class CreditList : Form
     {
         ClientPage ClientLink;
+        CreditListShow sh;
         public CreditList(ClientPage cl)
         {
             InitializeComponent();
@@ -27,6 +29,30 @@ namespace scoringProject
         {
             this.Close();
             ClientLink.Visible = true;
+        }
+
+        private void CreditList_Load(object sender, EventArgs e)
+        {
+            sh = CreditListShow.getInstance();
+            sh.SetPage(richTextBoxCreditInfo, labelCreditName);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            sh.IncreaseCount();
+            sh.SetPage(richTextBoxCreditInfo, labelCreditName);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            sh.DecreaseCount();
+            sh.SetPage(richTextBoxCreditInfo, labelCreditName);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

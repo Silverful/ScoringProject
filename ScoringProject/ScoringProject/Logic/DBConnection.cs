@@ -14,6 +14,18 @@ namespace scoringProject.Logic
         private static string connectionString = "server = 127.0.0.2; user=root;database=scoringdb;port=3306;password=3453456";
 
         /// <summary>
+        /// Метод для изменения адреса базы данных
+        /// </summary>
+        /// <param name="server"></param>
+        /// <param name="user"></param>
+        /// <param name="database"></param>
+        /// <param name="port"></param>
+        /// <param name="password"></param>
+        public static void ChangeConnectionString(string server, string user, string database, string port, string password)
+        {
+            connectionString = "\" server = " + server + "; user=" + user + ";database=" + database + ";port=" + port + ";password=" + password + "\"";
+        }
+        /// <summary>
         /// Состояние соединения
         /// </summary>
         public static MySqlConnection Instance

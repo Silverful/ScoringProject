@@ -13,6 +13,7 @@ namespace scoringProject.Logic
     /// </summary>
     public static class InteractionDB
     {
+        #region Блок для регистрации
         /// <summary>
         /// Метод, реализующий добавление клиента в базу данных
         /// </summary>
@@ -64,11 +65,13 @@ namespace scoringProject.Logic
             DBConnection.CloseConnection();
             return NextID;
         }
+        #endregion
+
+        #region Блок для авторизации
         /// <summary>
         /// Список с результатами SELECT * запросов.
         /// </summary>
         public static List<string> StringResult = new List<string>();
-
         /// <summary>
         /// Метод проверяет, есть ли в базе данных пользователь с данными логином и паролем
         /// Если есть, то все параметры строки сохраняет в список StringResult
@@ -106,16 +109,78 @@ namespace scoringProject.Logic
             DBConnection.CloseConnection();
             return result; 
         }
+        #endregion
 
+        #region Блок для списка клиентов
+        public static string GetDescriptionText(int count)
+        {
+            string sqltext = "SELECT description from credittype where creditid = " + count.ToString();
+            DBConnection.Connect();
+            MySqlCommand cmd = new MySqlCommand(sqltext, DBConnection.Instance);
+            string text;
+            try
+            {
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    text = Convert.ToString(result);
+                }
+                else text = "Информация не найдена";
 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return text;
+        }
+        public static string GetCreditName(int count)
+        {
+            string sqltext = "SELECT creditname from credittype where creditid = " + count.ToString();
+            DBConnection.Connect();
+            MySqlCommand cmd = new MySqlCommand(sqltext, DBConnection.Instance);
+            string text;
+            try
+            {
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    text = Convert.ToString(result);
+                }
+                else text = "Информация не найдена";
 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return text;
+        }
+        public static int CountCreditTypes()
+        {
+            string sql = "SELECT COUNT(*) FROM credittype";
+            DBConnection.Connect();
+            int count = 0;
+            if (DBConnection.Instance != null)
+            {
+                try
+                {
 
-        /*  public static string CreateStatement(Client cl)
-          {
-              string Statement;
-              Statement = "INSERT INTO client values (" + cl.ID.ToString() + cl.Login + cl.Password 
-
-              return Statement; 
-          }*/
+                    MySqlCommand cmd = new MySqlCommand(sql, DBConnection.Instance);
+                    object NextIDobj = cmd.ExecuteScalar();
+                    if (NextIDobj != null)
+                    {
+                        count = Convert.ToInt32(NextIDobj);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            DBConnection.CloseConnection();
+            return count;
+        }
+        #endregion
     }
 }
