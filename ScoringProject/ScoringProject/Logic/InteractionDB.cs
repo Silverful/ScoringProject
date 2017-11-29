@@ -111,7 +111,7 @@ namespace scoringProject.Logic
         }
         #endregion
 
-        #region Блок для списка клиентов
+        #region Блок для списка кредитов
         public static string GetDescriptionText(int count)
         {
             string sqltext = "SELECT description from credittype where creditid = " + count.ToString();
@@ -180,6 +180,49 @@ namespace scoringProject.Logic
             }
             DBConnection.CloseConnection();
             return count;
+        }
+        #endregion
+
+        #region Блок для анкетирования
+        public static int GetTheNeededBall(string type)
+        {
+            int neededball = 0;
+            var sqltext = "SELECT ball from credittype where creditname = '" + type + "'";
+            DBConnection.Connect();
+
+            MySqlCommand cmd = new MySqlCommand(sqltext, DBConnection.Instance);
+            if (DBConnection.Instance != null)
+                try
+                {
+                    object NeededBallOBJ = cmd.ExecuteScalar();
+                    if (NeededBallOBJ != null)
+                        neededball = Convert.ToInt32(NeededBallOBJ);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            DBConnection.CloseConnection();
+            return neededball;
+        }
+        public static void InsertResult(int id, int ball, string credittype, string result)
+        {
+            string sqltext = "INSERT INTO result VALUES(" + id + "," + ball + ",'" + credittype + "','" + result + "')";
+            DBConnection.Connect();
+            MySqlCommand cmd = new MySqlCommand(sqltext, DBConnection.Instance);
+
+            if (DBConnection.Instance != null)
+            {
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            DBConnection.CloseConnection();
         }
         #endregion
     }

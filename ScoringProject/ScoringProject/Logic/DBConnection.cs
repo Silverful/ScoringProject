@@ -11,7 +11,7 @@ namespace scoringProject.Logic
     public static class DBConnection
     {
         private static MySqlConnection instance = null;
-        private static string connectionString = "server = 127.0.0.2; user=root;database=scoringdb;port=3306;password=3453456";
+        public static string connectionString = "server = 127.0.0.2; user=root;database=scoringdb;port=3306;password=3453456";
 
         /// <summary>
         /// Метод для изменения адреса базы данных

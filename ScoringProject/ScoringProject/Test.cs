@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using scoringProject.Logic;
 
 namespace scoringProject
 {
@@ -26,6 +27,42 @@ namespace scoringProject
         {
             this.Close();
             Client.Visible = true;
+        }
+
+        private void privateData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckBoxCheckChanged(object sender, EventArgs e)
+        {
+            CheckBox cb = (CheckBox)sender;
+            if (cb.Checked == true)
+            {
+                TestCounter.AddToCheckedList(cb);
+            }
+            else
+                TestCounter.DeleteFromCheckedList(cb);
+        }
+
+        private void buttonFinish_Click(object sender, EventArgs e)
+        {
+            TestCounter.TotalSum = 0;
+            
+
+            TestCounter.CountCheckBoxOkay();
+            TestCounter.CountAge(Convert.ToInt32(numericUpDownAge.Value));
+            TestCounter.CountChildren(Convert.ToInt32(numericUpDownChildren.Value));
+            TestCounter.CountSalary(Convert.ToInt32(numericUpDownSalary.Value));
+            labelTestResult.Text = TestCounter.TotalSum.ToString();
+
+            TestResultSetter.InitializeSetter(TestCounter.TotalSum, comboBoxCreditType.SelectedText, scoringProject.Logic.Client.getInstance().ID);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex++;
+
         }
     }
 }
