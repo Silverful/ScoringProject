@@ -45,5 +45,13 @@ namespace scoringProject
             Registration Regist = new Registration(this);
             Regist.Visible = true;
         }
+
+        private void buttonCalculator_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Calculator cal = new Calculator(this);
+            cal.Visible = true;
+
+        }
     }
 }

@@ -77,29 +77,29 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.adressData = new System.Windows.Forms.TabPage();
+            this.textBoxAdressStreet = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBoxAdressFlat = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBoxAdressBuildning = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBoxAdressCorp = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBoxAdressNumber = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBoxAdressCity = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBoxAdressArea = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBoxAdressRegion = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxAdressIndex = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.familyData = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
             this.checkedListBoxFamily = new System.Windows.Forms.CheckedListBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBoxAdressIndex = new System.Windows.Forms.TextBox();
-            this.textBoxAdressRegion = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBoxAdressCity = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBoxAdressArea = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBoxAdressCorp = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBoxAdressNumber = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBoxAdressFlat = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBoxAdressBuildning = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBoxAdressStreet = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.personalData.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -112,6 +112,7 @@
             // 
             // butComplete
             // 
+            this.butComplete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.butComplete.Location = new System.Drawing.Point(200, 325);
             this.butComplete.Name = "butComplete";
             this.butComplete.Size = new System.Drawing.Size(188, 33);
@@ -655,6 +656,177 @@
             this.adressData.Text = "Адрес";
             this.adressData.UseVisualStyleBackColor = true;
             // 
+            // textBoxAdressStreet
+            // 
+            this.textBoxAdressStreet.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressStreet.Location = new System.Drawing.Point(81, 185);
+            this.textBoxAdressStreet.Name = "textBoxAdressStreet";
+            this.textBoxAdressStreet.Size = new System.Drawing.Size(222, 20);
+            this.textBoxAdressStreet.TabIndex = 31;
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label28.Location = new System.Drawing.Point(13, 185);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(60, 20);
+            this.label28.TabIndex = 30;
+            this.label28.Text = "Улица";
+            // 
+            // textBoxAdressFlat
+            // 
+            this.textBoxAdressFlat.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxAdressFlat.Location = new System.Drawing.Point(405, 143);
+            this.textBoxAdressFlat.Name = "textBoxAdressFlat";
+            this.textBoxAdressFlat.Size = new System.Drawing.Size(124, 20);
+            this.textBoxAdressFlat.TabIndex = 29;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label26.Location = new System.Drawing.Point(309, 139);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(90, 20);
+            this.label26.TabIndex = 28;
+            this.label26.Text = "Квартира";
+            // 
+            // textBoxAdressBuildning
+            // 
+            this.textBoxAdressBuildning.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxAdressBuildning.Location = new System.Drawing.Point(406, 98);
+            this.textBoxAdressBuildning.Name = "textBoxAdressBuildning";
+            this.textBoxAdressBuildning.Size = new System.Drawing.Size(123, 20);
+            this.textBoxAdressBuildning.TabIndex = 27;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label27.Location = new System.Drawing.Point(309, 98);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(91, 20);
+            this.label27.TabIndex = 26;
+            this.label27.Text = "Строение";
+            // 
+            // textBoxAdressCorp
+            // 
+            this.textBoxAdressCorp.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxAdressCorp.Location = new System.Drawing.Point(391, 58);
+            this.textBoxAdressCorp.Name = "textBoxAdressCorp";
+            this.textBoxAdressCorp.Size = new System.Drawing.Size(138, 20);
+            this.textBoxAdressCorp.TabIndex = 25;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label24.Location = new System.Drawing.Point(309, 58);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(67, 20);
+            this.label24.TabIndex = 24;
+            this.label24.Text = "Корпус";
+            // 
+            // textBoxAdressNumber
+            // 
+            this.textBoxAdressNumber.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxAdressNumber.Location = new System.Drawing.Point(433, 19);
+            this.textBoxAdressNumber.Name = "textBoxAdressNumber";
+            this.textBoxAdressNumber.Size = new System.Drawing.Size(96, 20);
+            this.textBoxAdressNumber.TabIndex = 23;
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label25.Location = new System.Drawing.Point(309, 17);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(113, 20);
+            this.label25.TabIndex = 22;
+            this.label25.Text = "Номер дома";
+            // 
+            // textBoxAdressCity
+            // 
+            this.textBoxAdressCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressCity.Location = new System.Drawing.Point(153, 143);
+            this.textBoxAdressCity.Name = "textBoxAdressCity";
+            this.textBoxAdressCity.Size = new System.Drawing.Size(150, 20);
+            this.textBoxAdressCity.TabIndex = 21;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label22.Location = new System.Drawing.Point(13, 141);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(134, 20);
+            this.label22.TabIndex = 20;
+            this.label22.Text = "Город/поселок";
+            // 
+            // textBoxAdressArea
+            // 
+            this.textBoxAdressArea.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressArea.Location = new System.Drawing.Point(81, 102);
+            this.textBoxAdressArea.Name = "textBoxAdressArea";
+            this.textBoxAdressArea.Size = new System.Drawing.Size(222, 20);
+            this.textBoxAdressArea.TabIndex = 19;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label23.Location = new System.Drawing.Point(13, 100);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(60, 20);
+            this.label23.TabIndex = 18;
+            this.label23.Text = "Район";
+            // 
+            // textBoxAdressRegion
+            // 
+            this.textBoxAdressRegion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressRegion.Location = new System.Drawing.Point(207, 58);
+            this.textBoxAdressRegion.Name = "textBoxAdressRegion";
+            this.textBoxAdressRegion.Size = new System.Drawing.Size(96, 20);
+            this.textBoxAdressRegion.TabIndex = 17;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label21.Location = new System.Drawing.Point(13, 58);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(188, 20);
+            this.label21.TabIndex = 16;
+            this.label21.Text = "Область/регион/край";
+            // 
+            // textBoxAdressIndex
+            // 
+            this.textBoxAdressIndex.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxAdressIndex.Location = new System.Drawing.Point(81, 19);
+            this.textBoxAdressIndex.Name = "textBoxAdressIndex";
+            this.textBoxAdressIndex.Size = new System.Drawing.Size(222, 20);
+            this.textBoxAdressIndex.TabIndex = 15;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label20.Location = new System.Drawing.Point(13, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 20);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Индекс";
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(433, 239);
@@ -702,177 +874,6 @@
             this.checkedListBoxFamily.Size = new System.Drawing.Size(298, 151);
             this.checkedListBoxFamily.TabIndex = 0;
             // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label20.Location = new System.Drawing.Point(13, 17);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(70, 20);
-            this.label20.TabIndex = 14;
-            this.label20.Text = "Индекс";
-            // 
-            // textBoxAdressIndex
-            // 
-            this.textBoxAdressIndex.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxAdressIndex.Location = new System.Drawing.Point(81, 19);
-            this.textBoxAdressIndex.Name = "textBoxAdressIndex";
-            this.textBoxAdressIndex.Size = new System.Drawing.Size(222, 20);
-            this.textBoxAdressIndex.TabIndex = 15;
-            // 
-            // textBoxAdressRegion
-            // 
-            this.textBoxAdressRegion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxAdressRegion.Location = new System.Drawing.Point(207, 58);
-            this.textBoxAdressRegion.Name = "textBoxAdressRegion";
-            this.textBoxAdressRegion.Size = new System.Drawing.Size(96, 20);
-            this.textBoxAdressRegion.TabIndex = 17;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label21.Location = new System.Drawing.Point(13, 58);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(188, 20);
-            this.label21.TabIndex = 16;
-            this.label21.Text = "Область/регион/край";
-            // 
-            // textBoxAdressCity
-            // 
-            this.textBoxAdressCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxAdressCity.Location = new System.Drawing.Point(153, 143);
-            this.textBoxAdressCity.Name = "textBoxAdressCity";
-            this.textBoxAdressCity.Size = new System.Drawing.Size(150, 20);
-            this.textBoxAdressCity.TabIndex = 21;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label22.Location = new System.Drawing.Point(13, 141);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(134, 20);
-            this.label22.TabIndex = 20;
-            this.label22.Text = "Город/поселок";
-            // 
-            // textBoxAdressArea
-            // 
-            this.textBoxAdressArea.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxAdressArea.Location = new System.Drawing.Point(81, 102);
-            this.textBoxAdressArea.Name = "textBoxAdressArea";
-            this.textBoxAdressArea.Size = new System.Drawing.Size(222, 20);
-            this.textBoxAdressArea.TabIndex = 19;
-            // 
-            // label23
-            // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label23.Location = new System.Drawing.Point(13, 100);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(60, 20);
-            this.label23.TabIndex = 18;
-            this.label23.Text = "Район";
-            // 
-            // textBoxAdressCorp
-            // 
-            this.textBoxAdressCorp.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBoxAdressCorp.Location = new System.Drawing.Point(391, 58);
-            this.textBoxAdressCorp.Name = "textBoxAdressCorp";
-            this.textBoxAdressCorp.Size = new System.Drawing.Size(138, 20);
-            this.textBoxAdressCorp.TabIndex = 25;
-            // 
-            // label24
-            // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label24.Location = new System.Drawing.Point(309, 58);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(67, 20);
-            this.label24.TabIndex = 24;
-            this.label24.Text = "Корпус";
-            // 
-            // textBoxAdressNumber
-            // 
-            this.textBoxAdressNumber.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBoxAdressNumber.Location = new System.Drawing.Point(433, 19);
-            this.textBoxAdressNumber.Name = "textBoxAdressNumber";
-            this.textBoxAdressNumber.Size = new System.Drawing.Size(96, 20);
-            this.textBoxAdressNumber.TabIndex = 23;
-            // 
-            // label25
-            // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label25.Location = new System.Drawing.Point(309, 17);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(113, 20);
-            this.label25.TabIndex = 22;
-            this.label25.Text = "Номер дома";
-            // 
-            // textBoxAdressFlat
-            // 
-            this.textBoxAdressFlat.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBoxAdressFlat.Location = new System.Drawing.Point(405, 143);
-            this.textBoxAdressFlat.Name = "textBoxAdressFlat";
-            this.textBoxAdressFlat.Size = new System.Drawing.Size(124, 20);
-            this.textBoxAdressFlat.TabIndex = 29;
-            // 
-            // label26
-            // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label26.Location = new System.Drawing.Point(309, 139);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(90, 20);
-            this.label26.TabIndex = 28;
-            this.label26.Text = "Квартира";
-            // 
-            // textBoxAdressBuildning
-            // 
-            this.textBoxAdressBuildning.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBoxAdressBuildning.Location = new System.Drawing.Point(406, 98);
-            this.textBoxAdressBuildning.Name = "textBoxAdressBuildning";
-            this.textBoxAdressBuildning.Size = new System.Drawing.Size(123, 20);
-            this.textBoxAdressBuildning.TabIndex = 27;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label27.Location = new System.Drawing.Point(309, 98);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(91, 20);
-            this.label27.TabIndex = 26;
-            this.label27.Text = "Строение";
-            // 
-            // textBoxAdressStreet
-            // 
-            this.textBoxAdressStreet.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxAdressStreet.Location = new System.Drawing.Point(81, 185);
-            this.textBoxAdressStreet.Name = "textBoxAdressStreet";
-            this.textBoxAdressStreet.Size = new System.Drawing.Size(222, 20);
-            this.textBoxAdressStreet.TabIndex = 31;
-            // 
-            // label28
-            // 
-            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label28.Location = new System.Drawing.Point(13, 185);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(60, 20);
-            this.label28.TabIndex = 30;
-            this.label28.Text = "Улица";
-            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -880,10 +881,11 @@
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.butComplete);
+            this.MaximumSize = new System.Drawing.Size(600, 400);
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registration";
+            this.Text = "Регистрация";
             this.tabControl1.ResumeLayout(false);
             this.personalData.ResumeLayout(false);
             this.personalData.PerformLayout();

@@ -82,10 +82,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(375, 171);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(297, 139);
             this.dataGridView1.TabIndex = 5;
             // 
@@ -114,7 +117,6 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label3.Location = new System.Drawing.Point(35, 130);
@@ -125,6 +127,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label4.Location = new System.Drawing.Point(213, 60);
@@ -135,6 +138,7 @@
             // 
             // HelloName
             // 
+            this.HelloName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.HelloName.AutoSize = true;
             this.HelloName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.HelloName.Location = new System.Drawing.Point(343, 60);
@@ -240,6 +244,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.butBackToLogin);
+            this.MaximumSize = new System.Drawing.Size(700, 500);
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "ClientPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
