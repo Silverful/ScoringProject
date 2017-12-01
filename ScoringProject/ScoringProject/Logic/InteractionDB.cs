@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
+
 
 namespace scoringProject.Logic
 {
@@ -112,6 +115,11 @@ namespace scoringProject.Logic
         #endregion
 
         #region Блок для списка кредитов
+        /// <summary>
+        /// Метод для получения описания кредита
+        /// </summary>
+        /// <param name="count"></param>
+        /// <returns></returns>
         public static string GetDescriptionText(int count)
         {
             string sqltext = "SELECT description from credittype where creditid = " + count.ToString();
@@ -134,6 +142,11 @@ namespace scoringProject.Logic
             }
             return text;
         }
+        /// <summary>
+        /// Метод для получения названия кредита
+        /// </summary>
+        /// <param name="count"></param>
+        /// <returns></returns>
         public static string GetCreditName(int count)
         {
             string sqltext = "SELECT creditname from credittype where creditid = " + count.ToString();
@@ -156,6 +169,10 @@ namespace scoringProject.Logic
             }
             return text;
         }
+        /// <summary>
+        /// Метод для получения количества кредитов
+        /// </summary>
+        /// <returns></returns>
         public static int CountCreditTypes()
         {
             string sql = "SELECT COUNT(*) FROM credittype";
@@ -184,6 +201,11 @@ namespace scoringProject.Logic
         #endregion
 
         #region Блок для анкетирования
+        /// <summary>
+        /// Метод возвращающий необходимый балл для прохождения
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public static int GetTheNeededBall(string type)
         {
             int neededball = 0;
@@ -205,6 +227,13 @@ namespace scoringProject.Logic
             DBConnection.CloseConnection();
             return neededball;
         }
+        /// <summary>
+        /// Метод добавляющий результат анкетирования в БД
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="ball"></param>
+        /// <param name="credittype"></param>
+        /// <param name="result"></param>
         public static void InsertResult(int id, int ball, string credittype, string result)
         {
             string sqltext = "INSERT INTO result VALUES(" + id + "," + ball + ",'" + credittype + "','" + result + "')";
@@ -223,6 +252,25 @@ namespace scoringProject.Logic
                 }
             }
             DBConnection.CloseConnection();
+        }
+        #endregion
+
+        #region Блок для DataGridView
+        /// <summary>
+        /// Метод для получения данных для ДатаГрида
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static DataSet FillDataGrid(int id)
+        {
+            DBConnection.Connect();
+            string sqltext = "SELECT credittype, ball, result from result where clientid = " + id.ToString();
+            DataSet ds = new DataSet();
+            using (MySqlDataAdapter adap = new MySqlDataAdapter(sqltext, DBConnection.Instance))
+            {
+                adap.Fill(ds);
+            }
+            return ds;
         }
         #endregion
     }

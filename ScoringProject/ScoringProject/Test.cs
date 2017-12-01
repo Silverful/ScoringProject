@@ -26,7 +26,8 @@ namespace scoringProject
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Client.Visible = true;
+            ClientPage cl = new ClientPage();
+            cl.Visible = true;
         }
 
         private void privateData_Click(object sender, EventArgs e)
@@ -54,9 +55,12 @@ namespace scoringProject
             TestCounter.CountAge(Convert.ToInt32(numericUpDownAge.Value));
             TestCounter.CountChildren(Convert.ToInt32(numericUpDownChildren.Value));
             TestCounter.CountSalary(Convert.ToInt32(numericUpDownSalary.Value));
-            labelTestResult.Text = TestCounter.TotalSum.ToString();
 
-            TestResultSetter.InitializeSetter(TestCounter.TotalSum, comboBoxCreditType.SelectedText, scoringProject.Logic.Client.getInstance().ID);
+            TestResultSetter.InitializeSetter(TestCounter.TotalSum, comboBoxCreditType.SelectedItem.ToString(), scoringProject.Logic.Client.getInstance().ID);
+
+            this.Close();
+            ClientPage cl = new ClientPage();
+            cl.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)

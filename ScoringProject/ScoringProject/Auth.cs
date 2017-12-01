@@ -13,12 +13,9 @@ namespace scoringProject
 {
     public partial class Auth : Form
     {
-        private ClientPage ClientPg;
         public Auth()
         {
             InitializeComponent();
-            
-            ClientPg = new ClientPage(this);
         }
 
         private void butEnter_Click(object sender, EventArgs e)
@@ -26,13 +23,8 @@ namespace scoringProject
             if (Authorize.Enter(textBoxLogin, textBoxPass))
             {
                 this.Visible = false;
-                if (ClientPg.IsDisposed == false)
-                    ClientPg.Visible = true;
-                else
-                {
-                    ClientPage Cl = new ClientPage(this);
-                    Cl.Visible = true;
-                }
+                ClientPage Cl = new ClientPage(this);
+                Cl.Visible = true;
             }
             else butEnter.Text = "Вход не удался";
 

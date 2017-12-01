@@ -20,11 +20,14 @@ namespace scoringProject
         public ClientPage()
         {
             InitializeComponent();
+            DataGridViewer.FillDataGrid(this);
+
         }
         public ClientPage(Auth au)
         {
             InitializeComponent();
             LoginLink = au;
+            DataGridViewer.FillDataGrid(this);
         }
 
         private void butBackToLogin_Click(object sender, EventArgs e)
@@ -41,16 +44,16 @@ namespace scoringProject
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            TestPg = new Test(this);
-            TestPg.Visible = true;
-            this.Visible = false;
+            this.Close();
+            Test t = new Test();
+            t.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CreditList Cr = new CreditList(this);
-            this.Visible = false;
-            Cr.Visible = true;
+            this.Close();
+            CreditList cl = new CreditList();
+            cl.Visible = true;
         }
 
         private void ClientPage_Load(object sender, EventArgs e)

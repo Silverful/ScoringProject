@@ -14,6 +14,12 @@ namespace scoringProject.Logic
         public static int ClientId { get; set; }
         public static string Result { get; set; }
 
+        /// <summary>
+        /// Передача данных для БД
+        /// </summary>
+        /// <param name="sum"></param>
+        /// <param name="type"></param>
+        /// <param name="id"></param>
         public static void InitializeSetter(int sum, string type, int id)
         {
             TotalSum = sum;

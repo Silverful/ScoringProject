@@ -110,6 +110,7 @@
     <Compile Include="Logic\Client.cs" />
     <Compile Include="Logic\ClientPageOpen.cs" />
     <Compile Include="Logic\CreditListShow.cs" />
+    <Compile Include="Logic\DataGridViewer.cs" />
     <Compile Include="Logic\InteractionDB.cs" />
     <Compile Include="Logic\DBConnection.cs" />
     <Compile Include="Logic\TestCounter.cs" />

@@ -97,7 +97,6 @@
             this.history = new System.Windows.Forms.TabPage();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.comboBoxCreditType = new System.Windows.Forms.ComboBox();
-            this.labelTestResult = new System.Windows.Forms.Label();
             this.buttonFinish = new System.Windows.Forms.Button();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.checkBoxCH13 = new System.Windows.Forms.CheckBox();
@@ -946,7 +945,6 @@
             // history
             // 
             this.history.Controls.Add(this.groupBox21);
-            this.history.Controls.Add(this.labelTestResult);
             this.history.Controls.Add(this.buttonFinish);
             this.history.Controls.Add(this.groupBox20);
             this.history.Controls.Add(this.groupBox19);
@@ -983,20 +981,11 @@
             this.comboBoxCreditType.Size = new System.Drawing.Size(130, 21);
             this.comboBoxCreditType.TabIndex = 4;
             // 
-            // labelTestResult
-            // 
-            this.labelTestResult.AutoSize = true;
-            this.labelTestResult.Location = new System.Drawing.Point(581, 263);
-            this.labelTestResult.Name = "labelTestResult";
-            this.labelTestResult.Size = new System.Drawing.Size(35, 13);
-            this.labelTestResult.TabIndex = 9;
-            this.labelTestResult.Text = "label2";
-            // 
             // buttonFinish
             // 
-            this.buttonFinish.Location = new System.Drawing.Point(375, 255);
+            this.buttonFinish.Location = new System.Drawing.Point(280, 241);
             this.buttonFinish.Name = "buttonFinish";
-            this.buttonFinish.Size = new System.Drawing.Size(157, 29);
+            this.buttonFinish.Size = new System.Drawing.Size(191, 43);
             this.buttonFinish.TabIndex = 8;
             this.buttonFinish.Text = "Завершить анкетирование";
             this.buttonFinish.UseVisualStyleBackColor = true;
@@ -1268,7 +1257,6 @@
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.history.ResumeLayout(false);
-            this.history.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
@@ -1368,7 +1356,6 @@
         private System.Windows.Forms.CheckBox checkBoxP20;
         private System.Windows.Forms.Button buttonFinish;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label labelTestResult;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox21;

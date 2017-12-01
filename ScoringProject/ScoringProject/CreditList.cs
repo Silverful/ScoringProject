@@ -28,7 +28,8 @@ namespace scoringProject
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            ClientLink.Visible = true;
+            ClientPage cp = new ClientPage();
+            cp.Visible = true;
         }
 
         private void CreditList_Load(object sender, EventArgs e)

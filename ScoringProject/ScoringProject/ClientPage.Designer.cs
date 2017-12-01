@@ -31,7 +31,6 @@
             this.butBackToLogin = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@
             this.labelFIO = new System.Windows.Forms.Label();
             this.labelDateofBirth = new System.Windows.Forms.Label();
             this.labelCity = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // butBackToLogin
@@ -72,25 +70,13 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.Location = new System.Drawing.Point(375, 326);
+            this.button1.Location = new System.Drawing.Point(332, 326);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 37);
+            this.button1.Size = new System.Drawing.Size(158, 37);
             this.button1.TabIndex = 4;
             this.button1.Text = "Виды кредита";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(375, 171);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(297, 139);
-            this.dataGridView1.TabIndex = 5;
             // 
             // label1
             // 
@@ -240,7 +226,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.butBackToLogin);
@@ -250,7 +235,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientPage";
             this.Load += new System.EventHandler(this.ClientPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +245,6 @@
         private DevExpress.XtraEditors.SimpleButton butBackToLogin;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

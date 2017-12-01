@@ -177,6 +177,7 @@
             // 
             // trackBarSum
             // 
+            this.trackBarSum.LargeChange = 1;
             this.trackBarSum.Location = new System.Drawing.Point(16, 160);
             this.trackBarSum.Name = "trackBarSum";
             this.trackBarSum.Size = new System.Drawing.Size(332, 45);
