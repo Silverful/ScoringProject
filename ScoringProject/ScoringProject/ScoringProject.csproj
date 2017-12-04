@@ -94,6 +94,13 @@
     <Compile Include="Calculator.Designer.cs">
       <DependentUpon>Calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculatorL\CalcAuto.cs" />
+    <Compile Include="CalculatorL\CalcIpoteka.cs" />
+    <Compile Include="CalculatorL\CalcNecel.cs" />
+    <Compile Include="CalculatorL\CalcParent.cs" />
+    <Compile Include="CalculatorL\CalcsPotr.cs" />
+    <Compile Include="CalculatorL\CalculatorFabric.cs" />
+    <Compile Include="CalculatorL\ICalc.cs" />
     <Compile Include="ClientPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +114,7 @@
       <DependentUpon>CreditList.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\Authorize.cs" />
+    <Compile Include="CalculatorL\CalculatorLogic.cs" />
     <Compile Include="Logic\Client.cs" />
     <Compile Include="Logic\ClientPageOpen.cs" />
     <Compile Include="Logic\CreditListShow.cs" />
@@ -182,6 +190,27 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGround.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Автокредит.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ипотечный.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Нецелевой.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Потребительский .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\фон1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

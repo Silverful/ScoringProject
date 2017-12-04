@@ -107,7 +107,7 @@ namespace scoringProject.Logic
             }
             catch (Exception ex)
             {
-                throw ex;
+                return result = false;
             }
             DBConnection.CloseConnection();
             return result; 

@@ -31,11 +31,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBoxCreditInfo = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.labelCreditName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -52,9 +50,9 @@
             // richTextBoxCreditInfo
             // 
             this.richTextBoxCreditInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.richTextBoxCreditInfo.Location = new System.Drawing.Point(171, 79);
+            this.richTextBoxCreditInfo.Location = new System.Drawing.Point(16, 79);
             this.richTextBoxCreditInfo.Name = "richTextBoxCreditInfo";
-            this.richTextBoxCreditInfo.Size = new System.Drawing.Size(251, 213);
+            this.richTextBoxCreditInfo.Size = new System.Drawing.Size(406, 213);
             this.richTextBoxCreditInfo.TabIndex = 1;
             this.richTextBoxCreditInfo.Text = "";
             // 
@@ -62,6 +60,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(138, 9);
@@ -69,15 +68,6 @@
             this.label1.Size = new System.Drawing.Size(310, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Информация о кредитах:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 79);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 212);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button2
             // 
@@ -104,6 +94,7 @@
             // labelCreditName
             // 
             this.labelCreditName.AutoSize = true;
+            this.labelCreditName.BackColor = System.Drawing.Color.Transparent;
             this.labelCreditName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelCreditName.Location = new System.Drawing.Point(12, 53);
             this.labelCreditName.Name = "labelCreditName";
@@ -115,11 +106,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::scoringProject.Properties.Resources.фон1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.labelCreditName);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBoxCreditInfo);
             this.Controls.Add(this.button1);
@@ -129,7 +121,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список кредитов";
             this.Load += new System.EventHandler(this.CreditList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +131,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox richTextBoxCreditInfo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label labelCreditName;

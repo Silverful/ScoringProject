@@ -82,6 +82,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label1.Location = new System.Drawing.Point(412, 130);
             this.label1.Name = "label1";
@@ -93,6 +94,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label2.Location = new System.Drawing.Point(149, 9);
@@ -104,6 +106,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.label3.Location = new System.Drawing.Point(35, 130);
             this.label3.Name = "label3";
@@ -115,6 +118,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label4.Location = new System.Drawing.Point(213, 60);
             this.label4.Name = "label4";
@@ -126,6 +130,7 @@
             // 
             this.HelloName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.HelloName.AutoSize = true;
+            this.HelloName.BackColor = System.Drawing.Color.Transparent;
             this.HelloName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.HelloName.Location = new System.Drawing.Point(343, 60);
             this.HelloName.Name = "HelloName";
@@ -135,6 +140,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label5.Location = new System.Drawing.Point(18, 175);
             this.label5.Name = "label5";
@@ -145,6 +151,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label6.Location = new System.Drawing.Point(18, 212);
             this.label6.Name = "label6";
@@ -155,6 +162,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label7.Location = new System.Drawing.Point(18, 246);
             this.label7.Name = "label7";
@@ -165,6 +173,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label8.Location = new System.Drawing.Point(18, 277);
             this.label8.Name = "label8";
@@ -175,6 +184,7 @@
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
+            this.labelLogin.BackColor = System.Drawing.Color.Transparent;
             this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelLogin.Location = new System.Drawing.Point(83, 175);
             this.labelLogin.Name = "labelLogin";
@@ -184,6 +194,7 @@
             // labelFIO
             // 
             this.labelFIO.AutoSize = true;
+            this.labelFIO.BackColor = System.Drawing.Color.Transparent;
             this.labelFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelFIO.Location = new System.Drawing.Point(95, 212);
             this.labelFIO.Name = "labelFIO";
@@ -193,6 +204,7 @@
             // labelDateofBirth
             // 
             this.labelDateofBirth.AutoSize = true;
+            this.labelDateofBirth.BackColor = System.Drawing.Color.Transparent;
             this.labelDateofBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelDateofBirth.Location = new System.Drawing.Point(170, 246);
             this.labelDateofBirth.Name = "labelDateofBirth";
@@ -202,6 +214,7 @@
             // labelCity
             // 
             this.labelCity.AutoSize = true;
+            this.labelCity.BackColor = System.Drawing.Color.Transparent;
             this.labelCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelCity.Location = new System.Drawing.Point(90, 277);
             this.labelCity.Name = "labelCity";
@@ -212,6 +225,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::scoringProject.Properties.Resources.фон1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.labelCity);
             this.Controls.Add(this.labelDateofBirth);
