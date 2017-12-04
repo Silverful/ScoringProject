@@ -10,5 +10,7 @@ namespace scoringProject.CalculatorL
     public interface ICalc
     {
         void SetResult();
+        void Initialize();
+        void Clear();
     }
 }

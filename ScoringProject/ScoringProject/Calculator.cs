@@ -35,21 +35,11 @@ namespace scoringProject
             au.Visible = true;
         }
 
-        private void trackBarSum_ValueChanged(object sender, EventArgs e)
-        {
-            TrackBar bar = (TrackBar)sender;
-            label8.Text = bar.Value.ToString();
-        }
-
-        private void trackBarPeriod_ValueChanged(object sender, EventArgs e)
-        {
-            TrackBar bar = (TrackBar)sender;
-            label9.Text = bar.Value.ToString();
-        }
-
         private void comboBoxCreditName_SelectedValueChanged(object sender, EventArgs e)
         {
-            CurrentCalc = CalculatorLogic.InitializeCalc(this,groupBox1, e.ToString());
+            if (CurrentCalc != null)
+                CurrentCalc.Clear();
+            CurrentCalc = CalculatorLogic.InitializeCalc(this, groupBox1, comboBoxCreditName.SelectedItem.ToString());
         }
 
         private void buttonCount_Click(object sender, EventArgs e)

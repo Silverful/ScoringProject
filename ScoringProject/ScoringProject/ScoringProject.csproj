@@ -99,7 +99,7 @@
     <Compile Include="CalculatorL\CalcNecel.cs" />
     <Compile Include="CalculatorL\CalcParent.cs" />
     <Compile Include="CalculatorL\CalcsPotr.cs" />
-    <Compile Include="CalculatorL\CalculatorFabric.cs" />
+    <Compile Include="CalculatorL\CalculatorFactory.cs" />
     <Compile Include="CalculatorL\ICalc.cs" />
     <Compile Include="ClientPage.cs">
       <SubType>Form</SubType>

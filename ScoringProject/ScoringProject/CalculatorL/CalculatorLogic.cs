@@ -13,7 +13,7 @@ namespace scoringProject.CalculatorL
 
         public static ICalc InitializeCalc(Form form,GroupBox groupbox, string type)
         {
-            calc = new CalculatorFabric().CreateCalc(form, groupbox, type);
+            calc = new CalculatorFactory().CreateCalc(form, groupbox, type);
             return calc;
         }
     }
