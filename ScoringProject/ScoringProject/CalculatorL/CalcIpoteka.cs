@@ -105,7 +105,7 @@ namespace scoringProject.CalculatorL
 
             if (trackDur.Value != 0)
             {
-                textBoxOverPay.Text = Convert.ToString(Convert.ToDouble(textBoxMonthlyPay.Text) * (trackDur.Value * 12) - trackSum.Value);
+                textBoxOverPay.Text = Convert.ToString(Convert.ToDouble(textBoxMonthlyPay.Text) * (trackDur.Value * 12) - (trackSum.Value - trackHaveSum.Value));
             }
             else textBoxOverPay.Text = "";
 

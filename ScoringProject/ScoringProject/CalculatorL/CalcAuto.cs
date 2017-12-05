@@ -96,8 +96,8 @@ namespace scoringProject.CalculatorL
         }
         public override void SetResult()
         {
-           // Ежемесячный платеж = ((Необходимая сумма - Первоначальный взнос)*(1 + ставка) ^ срок в годах)/ (срок в годах *12)
-           // Переплата = Ежемесячный платеж* Срок кредита(в месяцах) - сумма кредита
+            // Ежемесячный платеж = ((Необходимая сумма - Первоначальный взнос)*(1 + ставка) ^ срок в годах)/ (срок в годах *12)
+            // Переплата=Ежемесячный платеж* Срок кредита (в месяцах)- (сумма кредита - первый взнос)
 
             if (trackDur.Value != 0)
             {
@@ -107,7 +107,7 @@ namespace scoringProject.CalculatorL
 
             if (trackDur.Value != 0)
             {
-                textBoxOverPay.Text = Convert.ToString(Convert.ToDouble(textBoxMonthlyPay.Text) * (trackDur.Value * 12) - trackSum.Value);
+                textBoxOverPay.Text = Convert.ToString(Convert.ToDouble(textBoxMonthlyPay.Text) * (trackDur.Value * 12) - (trackSum.Value-trackFirstSum.Value));
             }
             else textBoxOverPay.Text = "";
 
