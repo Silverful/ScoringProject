@@ -33,24 +33,27 @@ namespace scoringProject.CalculatorL
             #region LeftPart
             labelSumDesc = labelFactory.CreateLabel("Необходимая сумма", new Point(15, 50));
             controlsLeft.Add(labelSumDesc);
-            labelSum = labelFactory.CreateLabel("", new Point(200, 50));
+            labelSum = labelFactory.CreateLabel("300000", new Point(200, 50));
             controlsLeft.Add(labelSum);
             trackSum = trackFactory.CreateTrack(30000000, 300000, 100000, new Point(15, 70));
             controlsLeft.Add(trackSum);
+            trackSum.ValueChanged += TrackSumChange;
 
             labelHaveSumDesc = labelFactory.CreateLabel("У меня есть", new Point(15, 130));
             controlsLeft.Add(labelHaveSumDesc);
-            labelHaveSum = labelFactory.CreateLabel("", new Point(200, 130));
+            labelHaveSum = labelFactory.CreateLabel("45000", new Point(130, 130));
             controlsLeft.Add(labelHaveSum);
             trackHaveSum = trackFactory.CreateTrack(5000000, 45000, 10000, new Point(15, 150));
             controlsLeft.Add(trackHaveSum);
+            trackHaveSum.ValueChanged += TrackHaveChange;
 
             labelDurDesc = labelFactory.CreateLabel("Срок кредита", new Point(15, 210));
             controlsLeft.Add(labelDurDesc);
-            labelDur = labelFactory.CreateLabel("", new Point(200, 210));
+            labelDur = labelFactory.CreateLabel("1", new Point(150, 210));
             controlsLeft.Add(labelDur);
             trackDur = trackFactory.CreateTrack(30, 1, 5, new Point(15, 230));
             controlsLeft.Add(trackDur);
+            trackDur.ValueChanged += TrackDurChange;
             #endregion
             #region
             labelMonthlyPayDesc = labelFactory.CreateLabel("Ежемесячный платеж", new Point(10, 100));
@@ -72,6 +75,41 @@ namespace scoringProject.CalculatorL
             controlsRight.Add(textBoxOverPay);
             #endregion
             this.Initialize();
+        }
+        public void TrackSumChange(object sender, EventArgs e)
+        {
+            TrackBar track = (TrackBar)sender;
+            labelSum.Text = track.Value.ToString();
+        }
+        public void TrackDurChange(object sender, EventArgs e)
+        {
+            TrackBar track = (TrackBar)sender;
+            labelDur.Text = track.Value.ToString();
+        }
+        public void TrackHaveChange(object sender, EventArgs e)
+        {
+            TrackBar track = (TrackBar)sender;
+            labelHaveSum.Text = track.Value.ToString();
+        }
+        public override void SetResult()
+        {
+            // Ежемесячный платеж = ((Необходимая сумма - У меня есть)*(1 + ставка) ^ срок в годах)/ (срок в годах *12)
+            // Переплата = Ежемесячный платеж* Срок кредита(в месяцах) - сумма кредита
+
+
+            if (trackDur.Value != 0)
+            {
+                textBoxMonthlyPay.Text = Convert.ToString(((trackSum.Value - trackHaveSum.Value) * Math.Pow(1.094, trackDur.Value) / (trackDur.Value * 12)));
+            }
+            else textBoxMonthlyPay.Text = "Срок кредита должен быть больше 0";
+
+            if (trackDur.Value != 0)
+            {
+                textBoxOverPay.Text = Convert.ToString(Convert.ToDouble(textBoxMonthlyPay.Text) * (trackDur.Value * 12) - trackSum.Value);
+            }
+            else textBoxOverPay.Text = "";
+
+            textBoxHaveMonthPay.Text = Convert.ToString(trackHaveSum.Value);
         }
     }
 }

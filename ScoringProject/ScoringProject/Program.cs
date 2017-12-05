@@ -8,6 +8,8 @@ namespace scoringProject
 {
     static class Program
     {
+        public static Auth GlobalAuth;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +18,9 @@ namespace scoringProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Calculator());
+            GlobalAuth = new Auth();
+            Application.Run(GlobalAuth);
+            
         }
     }
 }

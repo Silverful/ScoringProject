@@ -45,5 +45,16 @@ namespace scoringProject
             cal.Visible = true;
 
         }
+
+        private void textBoxPass_TextChanged(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            t.PasswordChar = '*'; 
+        }
+
+        private void textBoxLogin_TextChanged(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+        }
     }
 }

@@ -248,7 +248,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "ClientPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ClientPage";
+            this.Text = "Страница клиента";
             this.Load += new System.EventHandler(this.ClientPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

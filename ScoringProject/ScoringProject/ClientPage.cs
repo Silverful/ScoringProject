@@ -33,7 +33,8 @@ namespace scoringProject
         private void butBackToLogin_Click(object sender, EventArgs e)
         {
             Client.DestroyInstance();
-            LoginLink.Show();
+            Program.GlobalAuth.Show();
+            //LoginLink.Show();
             this.Close();
         }
 

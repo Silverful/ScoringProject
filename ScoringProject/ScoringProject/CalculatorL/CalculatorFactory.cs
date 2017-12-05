@@ -57,7 +57,8 @@ namespace scoringProject.CalculatorL
             track.Location = location;
             track.Size = new Size(330, 40);
             track.TickFrequency = max / 100;
-          //  track.BackColor = Color.Transparent;
+            track.TickStyle = TickStyle.None;
+            track.BackColor = Color.White;
 
             return track;
         }

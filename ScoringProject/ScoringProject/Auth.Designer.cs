@@ -57,6 +57,7 @@
             this.textBoxLogin.Size = new System.Drawing.Size(216, 20);
             this.textBoxLogin.TabIndex = 0;
             this.textBoxLogin.Text = "Введите логин";
+            this.textBoxLogin.TextChanged += new System.EventHandler(this.textBoxLogin_TextChanged);
             // 
             // textBoxPass
             // 
@@ -66,6 +67,7 @@
             this.textBoxPass.Size = new System.Drawing.Size(216, 20);
             this.textBoxPass.TabIndex = 1;
             this.textBoxPass.Text = "Введите пароль";
+            this.textBoxPass.TextChanged += new System.EventHandler(this.textBoxPass_TextChanged);
             // 
             // butReg
             // 

@@ -36,13 +36,14 @@ namespace scoringProject.CalculatorL
             labelSum = new Label();
             labelSum.Location = new Point(200, 135);
             labelSum.Font = new Font(labelSum.Font.Name, labelSum.Font.Size + 4);
-            labelSum.Text = "";
+            labelSum.Text = "0";
             labelSum.BackColor = Color.Transparent;
             labelSum.AutoSize = true;
             controlsLeft.Add(labelSum);
 
             trackSum = trackFactory.CreateTrack(3000000, 0, 10000, new Point(15, 160));
             controlsLeft.Add(trackSum);
+            trackSum.ValueChanged += TrackSumChange;
 
             labelDurDesc = new Label();
             labelDurDesc.Location = new Point(15, 225);
@@ -53,15 +54,16 @@ namespace scoringProject.CalculatorL
             controlsLeft.Add(labelDurDesc);
 
             labelDur = new Label();
-            labelDur.Location = new Point(200, 225);
+            labelDur.Location = new Point(150, 225);
             labelDur.Font = new Font(labelDur.Font.Name, labelDur.Font.Size + 4);
-            labelDur.Text = "";
+            labelDur.Text = "0";
             labelDur.BackColor = Color.Transparent;
             labelDur.AutoSize = true;
             controlsLeft.Add(labelDur);
 
             trackDur = trackFactory.CreateTrack(5, 0, 1, new Point(15, 250));
             controlsLeft.Add(trackDur);
+            trackDur.ValueChanged += TrackDurChange;
 
             #endregion
             #region RightPart
@@ -98,6 +100,32 @@ namespace scoringProject.CalculatorL
 
             this.Initialize();
 
+        }
+        public void TrackSumChange(object sender, EventArgs e)
+        {
+            TrackBar track = (TrackBar)sender;
+            labelSum.Text = track.Value.ToString();
+        }
+        public void TrackDurChange(object sender, EventArgs e)
+        {
+            TrackBar track = (TrackBar)sender;
+            labelDur.Text = track.Value.ToString();
+        }
+        public override void SetResult()
+        {
+            //Ежемесячный платеж= (Необходимая сумма*(1+ставка)^срок в годах)/ (срок в годах * 12)
+            //Переплата=Ежемесячный платеж* Срок кредита (в месяцах)- сумма кредита
+            if (trackDur.Value != 0)
+            {
+                textBoxMonthlyPay.Text = Convert.ToString((trackSum.Value * Math.Pow(1.129, trackDur.Value) / (trackDur.Value * 12)));
+            }
+            else textBoxMonthlyPay.Text = "Срок кредита должен быть больше 0";
+
+            if (trackDur.Value != 0)
+            {
+                textBoxOverPay.Text = Convert.ToString(Convert.ToDouble(textBoxMonthlyPay.Text) * (trackDur.Value * 12) - trackSum.Value);
+            }
+            else textBoxOverPay.Text = "";
         }
     }
 }
