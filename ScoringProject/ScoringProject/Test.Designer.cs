@@ -1203,11 +1203,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(159, 9);
+            this.label1.Location = new System.Drawing.Point(32, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 51);
+            this.label1.Size = new System.Drawing.Size(624, 51);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Анкетирование";
+            this.label1.Text = "Заполнение заявки на кредит";
             // 
             // Test
             // 

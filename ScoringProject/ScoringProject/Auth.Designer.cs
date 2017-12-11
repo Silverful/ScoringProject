@@ -42,17 +42,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.buttonCalculator = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.toolStripButtonProperties = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxLogin
             // 
             this.textBoxLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLogin.Location = new System.Drawing.Point(408, 22);
+            this.textBoxLogin.Location = new System.Drawing.Point(408, 40);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(216, 20);
             this.textBoxLogin.TabIndex = 0;
@@ -62,7 +65,7 @@
             // textBoxPass
             // 
             this.textBoxPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPass.Location = new System.Drawing.Point(408, 48);
+            this.textBoxPass.Location = new System.Drawing.Point(408, 64);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(216, 20);
             this.textBoxPass.TabIndex = 1;
@@ -72,7 +75,7 @@
             // butReg
             // 
             this.butReg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butReg.Location = new System.Drawing.Point(525, 74);
+            this.butReg.Location = new System.Drawing.Point(525, 88);
             this.butReg.Name = "butReg";
             this.butReg.Size = new System.Drawing.Size(99, 28);
             this.butReg.TabIndex = 6;
@@ -83,7 +86,7 @@
             // butEnter
             // 
             this.butEnter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butEnter.Location = new System.Drawing.Point(408, 74);
+            this.butEnter.Location = new System.Drawing.Point(408, 88);
             this.butEnter.Name = "butEnter";
             this.butEnter.Size = new System.Drawing.Size(99, 28);
             this.butEnter.TabIndex = 7;
@@ -97,7 +100,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::scoringProject.Properties.Resources.Потребительский;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 128);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 144);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(122, 121);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +113,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::scoringProject.Properties.Resources.Ипотечный;
-            this.pictureBox2.Location = new System.Drawing.Point(520, 128);
+            this.pictureBox2.Location = new System.Drawing.Point(520, 144);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(122, 121);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,7 +126,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::scoringProject.Properties.Resources.Автокредит;
-            this.pictureBox3.Location = new System.Drawing.Point(360, 128);
+            this.pictureBox3.Location = new System.Drawing.Point(360, 144);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(122, 121);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,7 +139,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::scoringProject.Properties.Resources.Нецелевой;
-            this.pictureBox4.Location = new System.Drawing.Point(200, 128);
+            this.pictureBox4.Location = new System.Drawing.Point(200, 144);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(122, 121);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +153,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(22, 266);
+            this.label2.Location = new System.Drawing.Point(22, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 20);
             this.label2.TabIndex = 13;
@@ -163,7 +166,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label3.Location = new System.Drawing.Point(209, 266);
+            this.label3.Location = new System.Drawing.Point(209, 272);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 14;
@@ -176,7 +179,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label4.Location = new System.Drawing.Point(347, 266);
+            this.label4.Location = new System.Drawing.Point(347, 272);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(145, 20);
             this.label4.TabIndex = 15;
@@ -189,7 +192,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label5.Location = new System.Drawing.Point(528, 264);
+            this.label5.Location = new System.Drawing.Point(528, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 20);
             this.label5.TabIndex = 16;
@@ -211,12 +214,33 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::scoringProject.Properties.Resources._1;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 8);
+            this.pictureBox5.Location = new System.Drawing.Point(16, 24);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(376, 112);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
+            // 
+            // toolStripButtonProperties
+            // 
+            this.toolStripButtonProperties.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonProperties.Image = global::scoringProject.Properties.Resources.icons8_settings_24;
+            this.toolStripButtonProperties.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonProperties.Name = "toolStripButtonProperties";
+            this.toolStripButtonProperties.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonProperties.Text = "Изменить адрес сервера базы данных";
+            this.toolStripButtonProperties.Click += new System.EventHandler(this.toolStripButtonProperties_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonProperties});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(684, 25);
+            this.toolStrip1.TabIndex = 19;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // Auth
             // 
@@ -226,6 +250,7 @@
             this.BackgroundImage = global::scoringProject.Properties.Resources.фон1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.buttonCalculator);
             this.Controls.Add(this.label5);
@@ -250,6 +275,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,6 +298,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonCalculator;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.ToolStripButton toolStripButtonProperties;
+        private System.Windows.Forms.ToolStrip toolStrip1;
     }
 }
 

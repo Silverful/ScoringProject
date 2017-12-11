@@ -64,7 +64,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(164, 37);
             this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "Перейти к анкетированию";
+            this.simpleButton1.Text = "Заполнение заявки на кредит";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // button1

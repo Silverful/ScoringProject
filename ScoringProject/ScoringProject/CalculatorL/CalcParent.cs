@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace scoringProject.CalculatorL
 {
-    public class CalcParent: ICalc
+    public abstract class CalcParent: ICalc
     {
         private Form f;
 

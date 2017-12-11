@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace scoringProject.Logic
 {
     public static class DBConnection
     {
         private static MySqlConnection instance = null;
-        public static string connectionString = "server = 127.0.0.2; user=root;database=scoringdb;port=3306;password=3453456";
+        private static string connectionString;
 
         /// <summary>
         /// Метод для изменения адреса базы данных
@@ -23,7 +24,11 @@ namespace scoringProject.Logic
         /// <param name="password"></param>
         public static void ChangeConnectionString(string server, string user, string database, string port, string password)
         {
-            connectionString = "\" server = " + server + "; user=" + user + ";database=" + database + ";port=" + port + ";password=" + password + "\"";
+            connectionString = "server = " + server + "; user=" + user + ";database=" + database + ";port=" + port + ";password=" + password;
+        }
+        public static void ChangeConnectionString(string sqltext)
+        {
+            connectionString = sqltext;
         }
         /// <summary>
         /// Состояние соединения
@@ -61,16 +66,17 @@ namespace scoringProject.Logic
         {
             if (instance == null || connectionString != null)
             {
-                var conn = new MySqlConnection(connectionString);
                 try
                 {
+                    var conn = new MySqlConnection(connectionString);
+
                     conn.Open();
                     instance = conn;
                     return;
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());
+                    MessageBox.Show("Невозможно установить соединение с базой данных");
                 }
             }
             return;

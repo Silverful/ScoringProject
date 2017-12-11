@@ -1,0 +1,1 @@
+server = 127.0.0.2; user=root;database=scoringdb;port=3306;password=3453456

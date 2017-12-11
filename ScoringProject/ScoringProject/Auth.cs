@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using scoringProject.Logic;
+using scoringProject.Props;
 
 namespace scoringProject
 {
     public partial class Auth : Form
     {
+        PropsPage PropsP;
         public Auth()
         {
             InitializeComponent();
+            PropsLoader Loader = new PropsLoader();
+            Loader.LoadSqlText();
         }
 
         private void butEnter_Click(object sender, EventArgs e)
@@ -25,6 +29,7 @@ namespace scoringProject
                 this.Visible = false;
                 ClientPage Cl = new ClientPage(this);
                 Cl.Visible = true;
+                butEnter.Text = "Вход";
             }
             else butEnter.Text = "Вход не удался";
 
@@ -55,6 +60,14 @@ namespace scoringProject
         private void textBoxLogin_TextChanged(object sender, EventArgs e)
         {
             TextBox t = (TextBox)sender;
+        }
+
+        private void toolStripButtonProperties_Click(object sender, EventArgs e)
+        {
+            // this.IsMdiContainer = true;
+            this.Enabled = false;
+           // toolStripButtonProperties.Enabled = false;
+            new PropsPage();
         }
     }
 }
