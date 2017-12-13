@@ -87,5 +87,15 @@ namespace scoringProject
         {
 
         }
+
+        private void textBoxNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ContentChecker.CheckNumTextBox(sender, e);
+        }
+
+        private void textBoxLetter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ContentChecker.CheckTextBox(sender, e);
+        }
     }
 }

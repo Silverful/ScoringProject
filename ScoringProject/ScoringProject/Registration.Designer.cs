@@ -31,6 +31,7 @@
             this.butComplete = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.personalData = new System.Windows.Forms.TabPage();
+            this.textBoxDateOfBirth = new System.Windows.Forms.MaskedTextBox();
             this.textBoxPlaceOfBirth = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxINN = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxDateOfBirth = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxPatronymic = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,11 +53,11 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.passportData = new System.Windows.Forms.TabPage();
+            this.textBoxPassportDate = new System.Windows.Forms.MaskedTextBox();
             this.textBoxPassportPlace = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxPassportCode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxPassportDate = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxPassportNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -65,11 +65,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.contactData = new System.Windows.Forms.TabPage();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxHomeNumber = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBoxHomeNumber = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.educationData = new System.Windows.Forms.TabPage();
@@ -137,6 +137,7 @@
             // 
             // personalData
             // 
+            this.personalData.Controls.Add(this.textBoxDateOfBirth);
             this.personalData.Controls.Add(this.textBoxPlaceOfBirth);
             this.personalData.Controls.Add(this.label19);
             this.personalData.Controls.Add(this.textBoxPassword);
@@ -148,7 +149,6 @@
             this.personalData.Controls.Add(this.label6);
             this.personalData.Controls.Add(this.textBoxINN);
             this.personalData.Controls.Add(this.label5);
-            this.personalData.Controls.Add(this.textBoxDateOfBirth);
             this.personalData.Controls.Add(this.label4);
             this.personalData.Controls.Add(this.textBoxPatronymic);
             this.personalData.Controls.Add(this.label3);
@@ -164,12 +164,22 @@
             this.personalData.Text = "Персональные данные";
             this.personalData.UseVisualStyleBackColor = true;
             // 
+            // textBoxDateOfBirth
+            // 
+            this.textBoxDateOfBirth.Location = new System.Drawing.Point(160, 136);
+            this.textBoxDateOfBirth.Mask = "00/00/0000";
+            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
+            this.textBoxDateOfBirth.Size = new System.Drawing.Size(144, 20);
+            this.textBoxDateOfBirth.TabIndex = 19;
+            this.textBoxDateOfBirth.ValidatingType = typeof(System.DateTime);
+            // 
             // textBoxPlaceOfBirth
             // 
             this.textBoxPlaceOfBirth.Location = new System.Drawing.Point(187, 205);
             this.textBoxPlaceOfBirth.Name = "textBoxPlaceOfBirth";
             this.textBoxPlaceOfBirth.Size = new System.Drawing.Size(119, 20);
             this.textBoxPlaceOfBirth.TabIndex = 18;
+            this.textBoxPlaceOfBirth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLetter_KeyPress);
             // 
             // label19
             // 
@@ -279,6 +289,7 @@
             this.textBoxINN.Name = "textBoxINN";
             this.textBoxINN.Size = new System.Drawing.Size(233, 20);
             this.textBoxINN.TabIndex = 9;
+            this.textBoxINN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNum_KeyPress);
             // 
             // label5
             // 
@@ -290,14 +301,6 @@
             this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "ИНН:";
-            // 
-            // textBoxDateOfBirth
-            // 
-            this.textBoxDateOfBirth.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxDateOfBirth.Location = new System.Drawing.Point(172, 135);
-            this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
-            this.textBoxDateOfBirth.Size = new System.Drawing.Size(134, 20);
-            this.textBoxDateOfBirth.TabIndex = 7;
             // 
             // label4
             // 
@@ -317,6 +320,7 @@
             this.textBoxPatronymic.Name = "textBoxPatronymic";
             this.textBoxPatronymic.Size = new System.Drawing.Size(189, 20);
             this.textBoxPatronymic.TabIndex = 5;
+            this.textBoxPatronymic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLetter_KeyPress);
             // 
             // label3
             // 
@@ -336,6 +340,7 @@
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(193, 20);
             this.textBoxSurname.TabIndex = 3;
+            this.textBoxSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLetter_KeyPress);
             // 
             // label2
             // 
@@ -355,6 +360,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(238, 20);
             this.textBoxName.TabIndex = 1;
+            this.textBoxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLetter_KeyPress);
             // 
             // label1
             // 
@@ -370,11 +376,11 @@
             // 
             // passportData
             // 
+            this.passportData.Controls.Add(this.textBoxPassportDate);
             this.passportData.Controls.Add(this.textBoxPassportPlace);
             this.passportData.Controls.Add(this.label11);
             this.passportData.Controls.Add(this.textBoxPassportCode);
             this.passportData.Controls.Add(this.label10);
-            this.passportData.Controls.Add(this.textBoxPassportDate);
             this.passportData.Controls.Add(this.label9);
             this.passportData.Controls.Add(this.textBoxPassportNumber);
             this.passportData.Controls.Add(this.label8);
@@ -389,6 +395,15 @@
             this.passportData.Text = "Паспортные данные";
             this.passportData.UseVisualStyleBackColor = true;
             // 
+            // textBoxPassportDate
+            // 
+            this.textBoxPassportDate.Location = new System.Drawing.Point(152, 96);
+            this.textBoxPassportDate.Mask = "00/00/0000";
+            this.textBoxPassportDate.Name = "textBoxPassportDate";
+            this.textBoxPassportDate.Size = new System.Drawing.Size(272, 20);
+            this.textBoxPassportDate.TabIndex = 24;
+            this.textBoxPassportDate.ValidatingType = typeof(System.DateTime);
+            // 
             // textBoxPassportPlace
             // 
             this.textBoxPassportPlace.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -396,6 +411,7 @@
             this.textBoxPassportPlace.Name = "textBoxPassportPlace";
             this.textBoxPassportPlace.Size = new System.Drawing.Size(295, 20);
             this.textBoxPassportPlace.TabIndex = 23;
+            this.textBoxPassportPlace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLetter_KeyPress);
             // 
             // label11
             // 
@@ -415,6 +431,7 @@
             this.textBoxPassportCode.Name = "textBoxPassportCode";
             this.textBoxPassportCode.Size = new System.Drawing.Size(216, 20);
             this.textBoxPassportCode.TabIndex = 21;
+            this.textBoxPassportCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNum_KeyPress);
             // 
             // label10
             // 
@@ -426,14 +443,6 @@
             this.label10.Size = new System.Drawing.Size(185, 20);
             this.label10.TabIndex = 20;
             this.label10.Text = "Код подразделения:";
-            // 
-            // textBoxPassportDate
-            // 
-            this.textBoxPassportDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxPassportDate.Location = new System.Drawing.Point(148, 93);
-            this.textBoxPassportDate.Name = "textBoxPassportDate";
-            this.textBoxPassportDate.Size = new System.Drawing.Size(275, 20);
-            this.textBoxPassportDate.TabIndex = 19;
             // 
             // label9
             // 
@@ -453,6 +462,7 @@
             this.textBoxPassportNumber.Name = "textBoxPassportNumber";
             this.textBoxPassportNumber.Size = new System.Drawing.Size(248, 20);
             this.textBoxPassportNumber.TabIndex = 17;
+            this.textBoxPassportNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNum_KeyPress);
             // 
             // label8
             // 
@@ -472,6 +482,7 @@
             this.textBoxPassportSeries.Name = "textBoxPassportSeries";
             this.textBoxPassportSeries.Size = new System.Drawing.Size(250, 20);
             this.textBoxPassportSeries.TabIndex = 15;
+            this.textBoxPassportSeries.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNum_KeyPress);
             // 
             // label7
             // 
@@ -498,10 +509,10 @@
             // contactData
             // 
             this.contactData.Controls.Add(this.textBoxEmail);
-            this.contactData.Controls.Add(this.label14);
             this.contactData.Controls.Add(this.textBoxHomeNumber);
-            this.contactData.Controls.Add(this.label13);
             this.contactData.Controls.Add(this.textBoxPhoneNumber);
+            this.contactData.Controls.Add(this.label14);
+            this.contactData.Controls.Add(this.label13);
             this.contactData.Controls.Add(this.label12);
             this.contactData.Controls.Add(this.button2);
             this.contactData.Location = new System.Drawing.Point(4, 22);
@@ -514,11 +525,26 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxEmail.Location = new System.Drawing.Point(82, 125);
+            this.textBoxEmail.Location = new System.Drawing.Point(88, 128);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(344, 20);
-            this.textBoxEmail.TabIndex = 19;
+            this.textBoxEmail.Size = new System.Drawing.Size(312, 20);
+            this.textBoxEmail.TabIndex = 22;
+            // 
+            // textBoxHomeNumber
+            // 
+            this.textBoxHomeNumber.Location = new System.Drawing.Point(216, 72);
+            this.textBoxHomeNumber.Mask = "(999) 000-0000";
+            this.textBoxHomeNumber.Name = "textBoxHomeNumber";
+            this.textBoxHomeNumber.Size = new System.Drawing.Size(184, 20);
+            this.textBoxHomeNumber.TabIndex = 21;
+            // 
+            // textBoxPhoneNumber
+            // 
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(216, 16);
+            this.textBoxPhoneNumber.Mask = "+7 (999) 000-0000";
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(184, 20);
+            this.textBoxPhoneNumber.TabIndex = 20;
             // 
             // label14
             // 
@@ -530,14 +556,6 @@
             this.label14.TabIndex = 18;
             this.label14.Text = "E-mail:";
             // 
-            // textBoxHomeNumber
-            // 
-            this.textBoxHomeNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxHomeNumber.Location = new System.Drawing.Point(220, 72);
-            this.textBoxHomeNumber.Name = "textBoxHomeNumber";
-            this.textBoxHomeNumber.Size = new System.Drawing.Size(206, 20);
-            this.textBoxHomeNumber.TabIndex = 17;
-            // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -548,14 +566,6 @@
             this.label13.Size = new System.Drawing.Size(184, 20);
             this.label13.TabIndex = 16;
             this.label13.Text = "Домашний телефон:";
-            // 
-            // textBoxPhoneNumber
-            // 
-            this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(220, 18);
-            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(206, 20);
-            this.textBoxPhoneNumber.TabIndex = 15;
             // 
             // label12
             // 
@@ -758,6 +768,7 @@
             this.textBoxAdressCity.Name = "textBoxAdressCity";
             this.textBoxAdressCity.Size = new System.Drawing.Size(150, 20);
             this.textBoxAdressCity.TabIndex = 21;
+            this.textBoxAdressCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLetter_KeyPress);
             // 
             // label22
             // 
@@ -777,6 +788,7 @@
             this.textBoxAdressArea.Name = "textBoxAdressArea";
             this.textBoxAdressArea.Size = new System.Drawing.Size(222, 20);
             this.textBoxAdressArea.TabIndex = 19;
+            this.textBoxAdressArea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLetter_KeyPress);
             // 
             // label23
             // 
@@ -796,6 +808,7 @@
             this.textBoxAdressRegion.Name = "textBoxAdressRegion";
             this.textBoxAdressRegion.Size = new System.Drawing.Size(96, 20);
             this.textBoxAdressRegion.TabIndex = 17;
+            this.textBoxAdressRegion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLetter_KeyPress);
             // 
             // label21
             // 
@@ -815,6 +828,7 @@
             this.textBoxAdressIndex.Name = "textBoxAdressIndex";
             this.textBoxAdressIndex.Size = new System.Drawing.Size(222, 20);
             this.textBoxAdressIndex.TabIndex = 15;
+            this.textBoxAdressIndex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNum_KeyPress);
             // 
             // label20
             // 
@@ -920,7 +934,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxINN;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxDateOfBirth;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxPatronymic;
         private System.Windows.Forms.Label label3;
@@ -941,17 +954,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxPassportCode;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxPassportDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxPassportNumber;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxPassportSeries;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBoxHomeNumber;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckedListBox checkedListBoxEducation;
@@ -981,5 +990,10 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBoxAdressIndex;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.MaskedTextBox textBoxPhoneNumber;
+        private System.Windows.Forms.MaskedTextBox textBoxDateOfBirth;
+        private System.Windows.Forms.MaskedTextBox textBoxPassportDate;
+        private System.Windows.Forms.MaskedTextBox textBoxEmail;
+        private System.Windows.Forms.MaskedTextBox textBoxHomeNumber;
     }
 }

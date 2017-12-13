@@ -68,5 +68,10 @@ namespace scoringProject
             tabControl1.SelectedIndex++;
 
         }
+
+        private void checkBoxP1_Click(object sender, EventArgs e)
+        {
+            ContentChecker.CheckBoxChecker((CheckBox)sender);
+        }
     }
 }

@@ -221,6 +221,7 @@
             this.checkBoxP20.Text = "Отсутствует";
             this.checkBoxP20.UseVisualStyleBackColor = true;
             this.checkBoxP20.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP20.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP19
             // 
@@ -233,6 +234,7 @@
             this.checkBoxP19.Text = "Есть";
             this.checkBoxP19.UseVisualStyleBackColor = true;
             this.checkBoxP19.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP19.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox8
             // 
@@ -257,6 +259,7 @@
             this.checkBoxP18.Text = "У родственников";
             this.checkBoxP18.UseVisualStyleBackColor = true;
             this.checkBoxP18.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP18.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP17
             // 
@@ -269,6 +272,7 @@
             this.checkBoxP17.Text = "Собственное жилье";
             this.checkBoxP17.UseVisualStyleBackColor = true;
             this.checkBoxP17.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP17.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP15
             // 
@@ -281,6 +285,7 @@
             this.checkBoxP15.Text = "По найму";
             this.checkBoxP15.UseVisualStyleBackColor = true;
             this.checkBoxP15.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP15.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox7
             // 
@@ -303,6 +308,7 @@
             this.checkBoxP14.Tag = "20";
             this.checkBoxP14.Text = "Нет";
             this.checkBoxP14.UseVisualStyleBackColor = true;
+            this.checkBoxP14.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP13
             // 
@@ -314,6 +320,7 @@
             this.checkBoxP13.Tag = "0";
             this.checkBoxP13.Text = "Есть";
             this.checkBoxP13.UseVisualStyleBackColor = true;
+            this.checkBoxP13.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox6
             // 
@@ -362,6 +369,7 @@
             this.checkBoxP12.Text = "Овдовевшие";
             this.checkBoxP12.UseVisualStyleBackColor = true;
             this.checkBoxP12.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP12.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP11
             // 
@@ -374,6 +382,7 @@
             this.checkBoxP11.Text = "Разведены";
             this.checkBoxP11.UseVisualStyleBackColor = true;
             this.checkBoxP11.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP11.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP10
             // 
@@ -386,6 +395,7 @@
             this.checkBoxP10.Text = "Живут раздельно";
             this.checkBoxP10.UseVisualStyleBackColor = true;
             this.checkBoxP10.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP10.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP9
             // 
@@ -398,6 +408,7 @@
             this.checkBoxP9.Text = "Женат/замужем";
             this.checkBoxP9.UseVisualStyleBackColor = true;
             this.checkBoxP9.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP9.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP8
             // 
@@ -410,6 +421,7 @@
             this.checkBoxP8.Text = "Не женат/не замужем";
             this.checkBoxP8.UseVisualStyleBackColor = true;
             this.checkBoxP8.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP8.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox4
             // 
@@ -456,6 +468,7 @@
             this.checkBoxP7.Text = "Отслужил";
             this.checkBoxP7.UseVisualStyleBackColor = true;
             this.checkBoxP7.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP7.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP6
             // 
@@ -468,6 +481,7 @@
             this.checkBoxP6.Text = "Отсрочка";
             this.checkBoxP6.UseVisualStyleBackColor = true;
             this.checkBoxP6.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP6.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP5
             // 
@@ -480,6 +494,7 @@
             this.checkBoxP5.Text = "Невоеннообязан";
             this.checkBoxP5.UseVisualStyleBackColor = true;
             this.checkBoxP5.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP5.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox2
             // 
@@ -503,6 +518,7 @@
             this.checkBoxP4.Text = "Женский";
             this.checkBoxP4.UseVisualStyleBackColor = true;
             this.checkBoxP4.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP4.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP3
             // 
@@ -515,6 +531,7 @@
             this.checkBoxP3.Text = "Мужской";
             this.checkBoxP3.UseVisualStyleBackColor = true;
             this.checkBoxP3.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP3.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox1
             // 
@@ -538,6 +555,7 @@
             this.checkBoxP2.Text = "Нет";
             this.checkBoxP2.UseVisualStyleBackColor = true;
             this.checkBoxP2.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP2.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxP1
             // 
@@ -550,6 +568,7 @@
             this.checkBoxP1.Text = "Есть";
             this.checkBoxP1.UseVisualStyleBackColor = true;
             this.checkBoxP1.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxP1.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // work
             // 
@@ -602,6 +621,7 @@
             this.checkBoxW22.Text = "Нет";
             this.checkBoxW22.UseVisualStyleBackColor = true;
             this.checkBoxW22.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW22.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW21
             // 
@@ -614,6 +634,7 @@
             this.checkBoxW21.Text = "Да";
             this.checkBoxW21.UseVisualStyleBackColor = true;
             this.checkBoxW21.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW21.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox15
             // 
@@ -640,6 +661,7 @@
             this.checkBoxW20.Text = "Новая иномарка";
             this.checkBoxW20.UseVisualStyleBackColor = true;
             this.checkBoxW20.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW20.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW19
             // 
@@ -652,6 +674,7 @@
             this.checkBoxW19.Text = "Подержанная иномарка";
             this.checkBoxW19.UseVisualStyleBackColor = true;
             this.checkBoxW19.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW19.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW18
             // 
@@ -664,6 +687,7 @@
             this.checkBoxW18.Text = "Новая отечественная";
             this.checkBoxW18.UseVisualStyleBackColor = true;
             this.checkBoxW18.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW18.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW17
             // 
@@ -676,6 +700,7 @@
             this.checkBoxW17.Text = "Отечественная подержанная";
             this.checkBoxW17.UseVisualStyleBackColor = true;
             this.checkBoxW17.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW17.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW16
             // 
@@ -688,6 +713,7 @@
             this.checkBoxW16.Text = "Нет";
             this.checkBoxW16.UseVisualStyleBackColor = true;
             this.checkBoxW16.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW16.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox14
             // 
@@ -711,6 +737,7 @@
             this.checkBoxW10.Text = "Нет";
             this.checkBoxW10.UseVisualStyleBackColor = true;
             this.checkBoxW10.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW10.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW9
             // 
@@ -723,6 +750,7 @@
             this.checkBoxW9.Text = "Есть";
             this.checkBoxW9.UseVisualStyleBackColor = true;
             this.checkBoxW9.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW9.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox13
             // 
@@ -771,6 +799,7 @@
             this.checkBoxW15.Text = "Более 5 лет";
             this.checkBoxW15.UseVisualStyleBackColor = true;
             this.checkBoxW15.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW15.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW14
             // 
@@ -783,6 +812,7 @@
             this.checkBoxW14.Text = "Пять лет";
             this.checkBoxW14.UseVisualStyleBackColor = true;
             this.checkBoxW14.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW14.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW13
             // 
@@ -795,6 +825,7 @@
             this.checkBoxW13.Text = "До трех лет";
             this.checkBoxW13.UseVisualStyleBackColor = true;
             this.checkBoxW13.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW13.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW12
             // 
@@ -807,6 +838,7 @@
             this.checkBoxW12.Text = "До двух лет";
             this.checkBoxW12.UseVisualStyleBackColor = true;
             this.checkBoxW12.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW12.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW11
             // 
@@ -819,6 +851,7 @@
             this.checkBoxW11.Text = "Нет";
             this.checkBoxW11.UseVisualStyleBackColor = true;
             this.checkBoxW11.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW11.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox11
             // 
@@ -844,6 +877,7 @@
             this.checkBoxW8.Text = "Руководитель";
             this.checkBoxW8.UseVisualStyleBackColor = true;
             this.checkBoxW8.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW8.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW7
             // 
@@ -856,6 +890,7 @@
             this.checkBoxW7.Text = "Специалист";
             this.checkBoxW7.UseVisualStyleBackColor = true;
             this.checkBoxW7.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW7.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW6
             // 
@@ -868,6 +903,7 @@
             this.checkBoxW6.Text = "Обслуживающий персонал";
             this.checkBoxW6.UseVisualStyleBackColor = true;
             this.checkBoxW6.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW6.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW5
             // 
@@ -880,6 +916,7 @@
             this.checkBoxW5.Text = "Отсутствие";
             this.checkBoxW5.UseVisualStyleBackColor = true;
             this.checkBoxW5.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW5.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox10
             // 
@@ -905,6 +942,7 @@
             this.checkBoxW4.Text = "Остальное";
             this.checkBoxW4.UseVisualStyleBackColor = true;
             this.checkBoxW4.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW4.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW3
             // 
@@ -917,6 +955,7 @@
             this.checkBoxW3.Text = "Пенсионер";
             this.checkBoxW3.UseVisualStyleBackColor = true;
             this.checkBoxW3.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW3.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW2
             // 
@@ -929,6 +968,7 @@
             this.checkBoxW2.Text = "Коммерция";
             this.checkBoxW2.UseVisualStyleBackColor = true;
             this.checkBoxW2.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW2.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxW1
             // 
@@ -941,6 +981,7 @@
             this.checkBoxW1.Text = "Бюджетник";
             this.checkBoxW1.UseVisualStyleBackColor = true;
             this.checkBoxW1.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxW1.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // history
             // 
@@ -1013,6 +1054,7 @@
             this.checkBoxCH13.Text = "Нет";
             this.checkBoxCH13.UseVisualStyleBackColor = true;
             this.checkBoxCH13.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH13.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxCH12
             // 
@@ -1026,6 +1068,7 @@
             this.checkBoxCH12.Text = "Да";
             this.checkBoxCH12.UseVisualStyleBackColor = true;
             this.checkBoxCH12.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH12.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox19
             // 
@@ -1051,6 +1094,7 @@
             this.checkBoxCH11.Text = "Более года";
             this.checkBoxCH11.UseVisualStyleBackColor = true;
             this.checkBoxCH11.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH11.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxCH10
             // 
@@ -1063,6 +1107,7 @@
             this.checkBoxCH10.Text = "От 30 дней до года";
             this.checkBoxCH10.UseVisualStyleBackColor = true;
             this.checkBoxCH10.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH10.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxCH9
             // 
@@ -1075,6 +1120,7 @@
             this.checkBoxCH9.Text = "До 30 дней";
             this.checkBoxCH9.UseVisualStyleBackColor = true;
             this.checkBoxCH9.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH9.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxCH8
             // 
@@ -1087,6 +1133,7 @@
             this.checkBoxCH8.Text = "Нет";
             this.checkBoxCH8.UseVisualStyleBackColor = true;
             this.checkBoxCH8.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH8.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox18
             // 
@@ -1111,6 +1158,7 @@
             this.checkBoxCH7.Text = "Более одного";
             this.checkBoxCH7.UseVisualStyleBackColor = true;
             this.checkBoxCH7.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH7.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxCH6
             // 
@@ -1123,6 +1171,7 @@
             this.checkBoxCH6.Text = "Один";
             this.checkBoxCH6.UseVisualStyleBackColor = true;
             this.checkBoxCH6.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH6.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxCH5
             // 
@@ -1135,6 +1184,7 @@
             this.checkBoxCH5.Text = "Нет";
             this.checkBoxCH5.UseVisualStyleBackColor = true;
             this.checkBoxCH5.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH5.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // groupBox17
             // 
@@ -1160,6 +1210,7 @@
             this.checkBoxCH4.Text = "Есть непогашенные просрочки";
             this.checkBoxCH4.UseVisualStyleBackColor = true;
             this.checkBoxCH4.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH4.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxCH3
             // 
@@ -1172,6 +1223,7 @@
             this.checkBoxCH3.Text = "Были просрочки, погашены";
             this.checkBoxCH3.UseVisualStyleBackColor = true;
             this.checkBoxCH3.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH3.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxCH2
             // 
@@ -1184,6 +1236,7 @@
             this.checkBoxCH2.Text = "Никогда не брали кредит";
             this.checkBoxCH2.UseVisualStyleBackColor = true;
             this.checkBoxCH2.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH2.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // checkBoxCH1
             // 
@@ -1196,6 +1249,7 @@
             this.checkBoxCH1.Text = "Были кредиты раньше, вовремя отданы";
             this.checkBoxCH1.UseVisualStyleBackColor = true;
             this.checkBoxCH1.CheckedChanged += new System.EventHandler(this.CheckBoxCheckChanged);
+            this.checkBoxCH1.Click += new System.EventHandler(this.checkBoxP1_Click);
             // 
             // label1
             // 
