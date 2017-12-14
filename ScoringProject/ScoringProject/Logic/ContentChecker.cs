@@ -46,5 +46,39 @@ namespace scoringProject.Logic
                 MessageBox.Show("В каждом разделе можно отметить лишь один вариант ответа!");
             }
         }
+        public static bool CheckGroupBoxedChecked(TabControl tab)
+        {
+            bool AllFilled = true;
+            foreach (TabPage page in tab.TabPages)
+            {
+                foreach (Control contr in page.Controls)
+                {
+                    if (contr is GroupBox)
+                    {
+                        bool OnlyChecks = true;
+                        foreach (Control groupControl in contr.Controls)
+                        {
+                            if (!(groupControl is CheckBox))
+                            {
+                                OnlyChecks = false;
+                            }
+                        }
+                        if (OnlyChecks == true)
+                        {
+                            foreach (Control Check in contr.Controls)
+                            {
+                                CheckBox ch = (CheckBox)Check;
+                                if (ch.Checked == true)
+                                    AllFilled = true;
+                                else AllFilled = false;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            return AllFilled;
+        }
     }
 }

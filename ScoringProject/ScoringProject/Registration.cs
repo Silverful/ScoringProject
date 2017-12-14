@@ -27,48 +27,54 @@ namespace scoringProject
 
         private void butComplete_Click(object sender, EventArgs e)
         {
-            Client cl = Client.getInstance();
-            int ID = InteractionDB.CountNextID();
-            DateTime DateOfBirth = DateTime.Parse(textBoxDateOfBirth.Text);
-            DateTime PassportDate = DateTime.Parse(textBoxPassportDate.Text);
-            string gender;
-            if (checkBoxFemale.Checked == true)
-                gender = "женский";
-            else gender = "мужской";
-            string education = null;
-            foreach (object item in checkedListBoxEducation.SelectedItems)
+            try
             {
-                education += item.ToString();
-                education += "/";
+                Client cl = Client.getInstance();
+                int ID = InteractionDB.CountNextID();
+                DateTime DateOfBirth = DateTime.Parse(textBoxDateOfBirth.Text);
+                DateTime PassportDate = DateTime.Parse(textBoxPassportDate.Text);
+                string gender;
+                if (checkBoxFemale.Checked == true)
+                    gender = "женский";
+                else gender = "мужской";
+                string education = null;
+                foreach (object item in checkedListBoxEducation.SelectedItems)
+                {
+                    education += item.ToString();
+                    education += "/";
+                }
+                switch (checkedListBoxFamily.SelectedIndex)
+                {
+                    case 0:
+                        Family = "Женат/Замужем";
+
+                        break;
+                    case 1:
+                        Family = "Холост/Не замужем";
+                        break;
+                    case 2:
+                        Family = "Гражданский брак";
+                        break;
+                    case 3:
+                        Family = "Разведен/Разведена";
+                        break;
+                    case 4:
+                        Family = "Вдова/Вдовец";
+                        break;
+
+                }
+                cl.CreateSQLQuery(textBoxLogin.Text, textBoxPassword.Text, textBoxSurname.Text, textBoxName.Text, textBoxPatronymic.Text,
+                    DateOfBirth, textBoxPlaceOfBirth.Text, textBoxINN.Text, gender, textBoxPassportSeries.Text, textBoxPassportNumber.Text,
+                    PassportDate, textBoxPassportCode.Text, textBoxPassportPlace.Text, textBoxPhoneNumber.Text, textBoxHomeNumber.Text,
+                    textBoxEmail.Text, education, Family, textBoxAdressIndex.Text, textBoxAdressRegion.Text, textBoxAdressArea.Text, textBoxAdressCity.Text);
+                InteractionDB.AddClient(cl);
+                this.Close();
+                AuthLink.Visible = true;
             }
-            switch (checkedListBoxFamily.SelectedIndex)
+            catch (Exception ex)
             {
-                case 0:
-                    Family = "Женат/Замужем";
-                    
-                    break;
-                case 1:
-                    Family = "Холост/Не замужем";
-                    break;
-                case 2:
-                    Family = "Гражданский брак";
-                    break;
-                case 3:
-                    Family = "Разведен/Разведена";
-                    break;
-                case 4:
-                    Family = "Вдова/Вдовец";
-                    break;
-
+                MessageBox.Show("Проверьте вводимые значения!", "Ошибка при выполнении");
             }
-            cl.CreateSQLQuery(textBoxLogin.Text, textBoxPassword.Text, textBoxSurname.Text, textBoxName.Text, textBoxPatronymic.Text,
-                DateOfBirth, textBoxPlaceOfBirth.Text, textBoxINN.Text, gender, textBoxPassportSeries.Text, textBoxPassportNumber.Text,
-                PassportDate, textBoxPassportCode.Text, textBoxPassportPlace.Text, textBoxPhoneNumber.Text, textBoxHomeNumber.Text,
-                textBoxEmail.Text, education, Family, textBoxAdressIndex.Text, textBoxAdressRegion.Text, textBoxAdressArea.Text, textBoxAdressCity.Text);
-            InteractionDB.AddClient(cl);
-            this.Close();
-            AuthLink.Visible = true;
-
 
 
         }

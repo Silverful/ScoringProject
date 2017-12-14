@@ -901,7 +901,6 @@
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Регистрация";
             this.tabControl1.ResumeLayout(false);
             this.personalData.ResumeLayout(false);
             this.personalData.PerformLayout();
