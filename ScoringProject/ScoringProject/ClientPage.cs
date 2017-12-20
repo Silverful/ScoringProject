@@ -52,8 +52,8 @@ namespace scoringProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            CreditList cl = new CreditList();
+            this.Visible = false;
+            CreditList cl = new CreditList(this);
             cl.Visible = true;
         }
 

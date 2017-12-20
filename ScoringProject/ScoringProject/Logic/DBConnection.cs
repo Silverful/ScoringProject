@@ -24,7 +24,7 @@ namespace scoringProject.Logic
         /// <param name="password"></param>
         public static void ChangeConnectionString(string server, string user, string database, string port, string password)
         {
-            connectionString = "server = " + server + "; user=" + user + ";database=" + database + ";port=" + port + ";password=" + password;
+            connectionString = "server=" + server + "; user=" + user + ";database=" + database + ";port=" + port + ";password=" + password;
         }
         public static void ChangeConnectionString(string sqltext)
         {

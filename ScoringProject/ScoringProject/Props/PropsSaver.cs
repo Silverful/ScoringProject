@@ -25,7 +25,7 @@ namespace scoringProject.Props
         }
         private void ChangeSqlText(List<TextBox> tb)
         {
-            DBConnection.ChangeConnectionString(tb[0].Text +';', tb[1].Text + ';', tb[2].Text + ';', tb[3].Text + ';', tb[4].Text + ';');
+            DBConnection.ChangeConnectionString(tb[0].Text, tb[1].Text, tb[2].Text, tb[3].Text, tb[4].Text);
             sqltext = DBConnection.ConnectionString;
         }
         private void ChangeSqlText(string text)

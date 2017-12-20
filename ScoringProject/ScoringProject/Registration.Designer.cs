@@ -260,6 +260,7 @@
             this.checkBoxFemale.TabIndex = 1;
             this.checkBoxFemale.Text = "Женский";
             this.checkBoxFemale.UseVisualStyleBackColor = true;
+            this.checkBoxFemale.Click += new System.EventHandler(this.checkBoxMale_Click);
             // 
             // checkBoxMale
             // 
@@ -270,6 +271,7 @@
             this.checkBoxMale.TabIndex = 0;
             this.checkBoxMale.Text = "Мужской";
             this.checkBoxMale.UseVisualStyleBackColor = true;
+            this.checkBoxMale.Click += new System.EventHandler(this.checkBoxMale_Click);
             // 
             // label6
             // 
@@ -533,7 +535,7 @@
             // textBoxHomeNumber
             // 
             this.textBoxHomeNumber.Location = new System.Drawing.Point(216, 72);
-            this.textBoxHomeNumber.Mask = "(999) 000-0000";
+            this.textBoxHomeNumber.Mask = "(99999) 0-00-00";
             this.textBoxHomeNumber.Name = "textBoxHomeNumber";
             this.textBoxHomeNumber.Size = new System.Drawing.Size(184, 20);
             this.textBoxHomeNumber.TabIndex = 21;
@@ -617,6 +619,7 @@
             this.checkedListBoxEducation.Name = "checkedListBoxEducation";
             this.checkedListBoxEducation.Size = new System.Drawing.Size(242, 172);
             this.checkedListBoxEducation.TabIndex = 15;
+            this.checkedListBoxEducation.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxFamily_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -887,6 +890,7 @@
             this.checkedListBoxFamily.Name = "checkedListBoxFamily";
             this.checkedListBoxFamily.Size = new System.Drawing.Size(298, 151);
             this.checkedListBoxFamily.TabIndex = 0;
+            this.checkedListBoxFamily.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxFamily_SelectedIndexChanged);
             // 
             // Registration
             // 

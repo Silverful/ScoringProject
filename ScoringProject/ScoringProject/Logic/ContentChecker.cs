@@ -65,13 +65,15 @@ namespace scoringProject.Logic
                         }
                         if (OnlyChecks == true)
                         {
+                            bool IsOneChecked = false;
                             foreach (Control Check in contr.Controls)
                             {
                                 CheckBox ch = (CheckBox)Check;
                                 if (ch.Checked == true)
-                                    AllFilled = true;
-                                else AllFilled = false;
+                                    IsOneChecked = true;
                             }
+                            if (!IsOneChecked)
+                                AllFilled = false;
                         }
 
                     }

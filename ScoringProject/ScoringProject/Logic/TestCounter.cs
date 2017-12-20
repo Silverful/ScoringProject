@@ -72,9 +72,9 @@ namespace scoringProject.Logic
         /// <param name="sal"></param>
         public static void CountSalary(int sal)
         {
-            if (sal < 5000)
-                TotalSum += 9;
-            else if (sal >= 5000 && sal < 15000)
+            if (sal < 9489)
+                TotalSum -= 100000;
+            else if (sal >= 9489 && sal < 15000)
                 TotalSum += 57;
             else if (sal >= 15000 && sal < 25000)
                 TotalSum += 94;
@@ -101,5 +101,28 @@ namespace scoringProject.Logic
                 TotalSum += 4;
         }
         #endregion
+
+        public static void CheckIndex()
+        {
+            bool CheckResult;
+            Client client = Client.getInstance();
+
+            CheckResult = InteractionDB.CheckIndex(client.Index);
+            if (CheckResult)
+                return;
+            else TotalSum -= 10000;
+        }
+        public static void CheckPhoneCode()
+        {
+            bool CheckResult;
+            Client client = Client.getInstance();
+            string Phone = client.HomePhoneNumber;
+            string PhoneCode = Phone.Substring(1, 5);
+
+            CheckResult = InteractionDB.CheckPhoneCode(PhoneCode);
+            if (CheckResult)
+                return;
+            else TotalSum -= 10000;
+        }
     }
 }

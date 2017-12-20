@@ -80,7 +80,13 @@ namespace scoringProject.Logic
             lb.Text = CreditName;
             tb.Text = CreditDescription;
         }
-
+        public void SetPageWithCount(RichTextBox tb, Label lb, int numCount)
+        {
+            count = numCount;
+            GetInfo(numCount);
+            lb.Text = CreditName;
+            tb.Text = CreditDescription;
+        }
         public void IncreaseCount()
         {
             if (count != maxCount)

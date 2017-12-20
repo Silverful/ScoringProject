@@ -59,7 +59,8 @@ namespace scoringProject
                     TestCounter.CountAge(Convert.ToInt32(numericUpDownAge.Value));
                     TestCounter.CountChildren(Convert.ToInt32(numericUpDownChildren.Value));
                     TestCounter.CountSalary(Convert.ToInt32(numericUpDownSalary.Value));
-
+                    TestCounter.CheckIndex();
+                    TestCounter.CheckPhoneCode();
                     TestResultSetter.InitializeSetter(TestCounter.TotalSum, comboBoxCreditType.SelectedItem.ToString(), scoringProject.Logic.Client.getInstance().ID);
                     this.Close();
                     ClientPage cl = new ClientPage();

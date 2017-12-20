@@ -103,5 +103,32 @@ namespace scoringProject
         {
             ContentChecker.CheckTextBox(sender, e);
         }
+
+        private void checkBoxMale_Click(object sender, EventArgs e)
+        {
+            ContentChecker.CheckBoxChecker((CheckBox)sender);
+        }
+
+        private void checkedListBoxFamily_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckedListBox CLB = (CheckedListBox)sender;
+            if (CLB.CheckedItems.Count > 1)
+            {
+                for (int i = 0; i < CLB.Items.Count; i++)
+                     CLB.SetItemChecked(i, false);
+                 CLB.SetItemChecked(CLB.SelectedIndex, true);
+            }
+        }
+
+        private void checkedListBoxEducation_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+            CheckedListBox CLB = (CheckedListBox)sender;
+            if (CLB.CheckedItems.Count > 1)
+            {
+                CLB.SetItemChecked(CLB.SelectedIndex, false);
+            }
+        } 
+        
     }
 }

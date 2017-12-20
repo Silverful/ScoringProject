@@ -149,7 +149,6 @@ C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProjec
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
-C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\obj\Debug\ScoringProject.csprojResolveAssemblyReference.cache
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\obj\Debug\scoringProject.Auth.resources
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\obj\Debug\scoringProject.ClientPage.resources
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\obj\Debug\scoringProject.Properties.Resources.resources
@@ -161,3 +160,4 @@ C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProjec
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\bin\Debug\MySql.Data.dll
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\bin\Debug\MySql.Data.xml
 C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\obj\Debug\scoringProject.Calculator.resources
+C:\Users\Антон\Documents\GitHub\ScoringProject\ScoringProject\ScoringProject\obj\Debug\ScoringProject.csprojResolveAssemblyReference.cache

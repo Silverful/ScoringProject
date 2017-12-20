@@ -69,5 +69,33 @@ namespace scoringProject
            // toolStripButtonProperties.Enabled = false;
             new PropsPage();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            CreditList cr = new CreditList(this, 3);
+            cr.Visible = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            CreditList cr = new CreditList(this, 1);
+            cr.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            CreditList cr = new CreditList(this, 0);
+            cr.Visible = true;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            CreditList cr = new CreditList(this, 2);
+            cr.Visible = true;
+        }
     }
 }

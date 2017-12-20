@@ -273,5 +273,66 @@ namespace scoringProject.Logic
             return ds;
         }
         #endregion
+
+        public static bool CheckIndex(string index)
+        {
+            bool result;
+
+            DBConnection.Connect();
+            try
+            {
+                string sqltext = "SELECT * FROM mailindex where Индексы = " + index.ToString();
+                MySqlCommand cmd = new MySqlCommand(sqltext, DBConnection.Instance);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                if (rdr.HasRows == false)
+                    result = false;
+                else
+                {
+                    result = true;
+                    while (rdr.Read())
+                    {
+                        for (int j = 0; j < rdr.FieldCount; j++)
+                            StringResult.Add(rdr[j].ToString());
+                    }
+                }
+                rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                return result = false;
+            }
+            DBConnection.CloseConnection();
+            return result;
+        }
+        public static bool CheckPhoneCode(string code)
+        {
+            bool result;
+
+            DBConnection.Connect();
+            try
+            {
+                string sqltext = "SELECT * FROM phonecode where Код = " + code.ToString();
+                MySqlCommand cmd = new MySqlCommand(sqltext, DBConnection.Instance);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                if (rdr.HasRows == false)
+                    result = false;
+                else
+                {
+                    result = true;
+                    while (rdr.Read())
+                    {
+                        for (int j = 0; j < rdr.FieldCount; j++)
+                            StringResult.Add(rdr[j].ToString());
+                    }
+                }
+                rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                return result = false;
+            }
+            DBConnection.CloseConnection();
+            return result;
+        }
     }
 }

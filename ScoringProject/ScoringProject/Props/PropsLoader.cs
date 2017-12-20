@@ -13,7 +13,7 @@ namespace scoringProject.Props
 {
     public class PropsLoader
     {
-        public string DefaultSQL { get; private set; } = "server = 127.0.0.2; user=root;database=scoringdb;port=3306;password=3453456";
+        public string DefaultSQL { get; private set; } = "server=127.0.0.2;user=root;database=scoringdb;port=3306;password=3453456";
         public string SQLText { get; set; }
 
         public PropsLoader()

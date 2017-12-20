@@ -13,12 +13,19 @@ namespace scoringProject
 {
     public partial class CreditList : Form
     {
-        ClientPage ClientLink;
+        Form PreviousPageLink;
         CreditListShow sh;
-        public CreditList(ClientPage cl)
+        public CreditList(Form cl)
         {
             InitializeComponent();
-            ClientLink = cl;
+            PreviousPageLink = cl;
+        }
+        public CreditList(Form cl, int count)
+        {
+            InitializeComponent();
+            PreviousPageLink = cl;
+            sh = CreditListShow.getInstance();
+            sh.SetPageWithCount(richTextBoxCreditInfo, labelCreditName, count);
         }
         public CreditList()
         {
@@ -28,8 +35,7 @@ namespace scoringProject
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            ClientPage cp = new ClientPage();
-            cp.Visible = true;
+            PreviousPageLink.Visible = true;
         }
 
         private void CreditList_Load(object sender, EventArgs e)
